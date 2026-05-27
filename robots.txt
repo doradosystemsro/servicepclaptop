@@ -1,0 +1,29 @@
+# robots.txt - Service PC Laptop
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.env
+Disallow: /.ht
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+# Sitemap
+Sitemap: https://servicepclaptop.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 0
+Request-rate: 30/60
+
+# Preferred
+Prefer-http-status-codes: 301 302 307

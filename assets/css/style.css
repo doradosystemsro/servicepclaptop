@@ -1296,3 +1296,13 @@ section h2 {
 .pricing-disclaimer strong {
     color: #78350f;
 }
+
+/* --- FIX GLOBAL HOVER BUTOANE CONVERSIE --- */
+.btn-large:hover,
+a.btn-primary:hover,
+a[href*="contact.html"]:hover {
+    color: #0061df !important;       /* Textul devine albastru închis, ultra-lizibil */
+    background-color: #ffffff !important;  /* Fundalul butonului devine ALB curat */
+    border-color: #ffffff !important;      /* Conturul devine și el alb */
+    text-decoration: none !important;      /* Eliminăm orice subliniere parazită */
+}

@@ -14,7 +14,7 @@ export default defineConfig({
         name: "post",
         label: "Articole Blog",
         path: "blog",
-        format: "html", // ÎI SPUNEM EXPLICIT CĂ AI FIȘIERE .HTML ACOLO!
+        format: "html",
         fields: [
           {
             type: "string",
@@ -24,9 +24,12 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "rich-text",
+            type: "string", // SCHIMBAT DIN RICH-TEXT ÎN STRING SIMPLU
             name: "body",
-            label: "Continut",
+            label: "Continut HTML",
+            ui: {
+              component: "textarea" // Îi dă o cutie mare de text stabilă
+            }
           }
         ],
       },

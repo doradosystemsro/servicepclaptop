@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panou Administrare Dorado Systems</title>
+  <title>Panou Administrare - Dorado Systems</title>
+  <!-- Stilul oficial TinaCMS adus prin CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/@tinacms/toolkit@latest/dist/styles.css">
 </head>
-<body style="margin: 0;">
+<body style="margin: 0; background: #13141f; font-family: sans-serif;">
 
-  <!-- Containerul pentru interfata Tina -->
-  <div id="root"></div>
+  <!-- Aici se va ancora aplicatia vizuala -->
+  <div id="tina-admin-root"></div>
 
-  <!-- Folosim ultima versiune stabila aliniata la serviciile v2 -->
-  <script src="https://unpkg.com/tinacms@latest/dist/index.js"></script>
+  <!-- Scriptul oficial independent de pe CDN care contine API-ul gata configurat -->
+  <script src="https://unpkg.com/@tinacms/boring-admin@latest/dist/index.js"></script>
   <script>
-    window.TinaCMS.init({
-      clientId: "8640bb63-3016-4565-a65a-62829d5758f7",
+    // Initializam panoul sa vorbeasca direct cu serverul lor central (Data Layer-ul hosted)
+    BoringAdmin.renderAdmin({
+      target: document.getElementById('tina-admin-root'),
+      clientId: "8640bb63-3016-4565-a65a-62829d5758f7", // Client ID-ul tau oficial
       branch: "main",
-      token: "c14c4e689dd6159dc6c5af7649cc30a6bc592dac",
-      isLocalBackend: false,
-      cmsCallback: (cms) => {
-        return cms;
-      }
+      isLocalBackend: false
     });
   </script>
 

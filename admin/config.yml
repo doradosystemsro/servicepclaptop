@@ -1,10 +1,12 @@
 backend:
   name: github
-  repo: doradosystemsro/servicepclaptop # Pune aici userul tau/repo
+  repo: doradosystemsro/servicepclaptop
   branch: main
+  base_url: https://servicepclaptop.pages.dev
+  auth_endpoint: api/auth
 
-media_folder: "assets/img" # Unde se salveaza pozele din articole
-public_folder: "/assets/img"
+media_folder: "assets"
+public_folder: "/assets"
 
 collections:
   - name: "blog"
@@ -16,5 +18,4 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Titlu", name: "title", widget: "string" }
-      - { label: "Data", name: "date", widget: "datetime" }
       - { label: "Corp Articol (HTML)", name: "body", widget: "code", default_language: "html" }

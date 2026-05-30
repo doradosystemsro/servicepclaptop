@@ -17,7 +17,7 @@ jobs:
       - name: Ruleaza comanda din checklist
         run: |
           npm install
-          npx @tinacms/cli@latest build --noTelemetry
+          TINA_PUBLIC_IS_LOCAL=true npx tinacms build --noTelemetry
           
       - name: Trimite fisierele compilate inapoi pe Github
         uses: stefanzweifel/git-auto-commit-action@v5

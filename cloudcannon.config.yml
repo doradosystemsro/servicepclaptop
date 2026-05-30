@@ -1,0 +1,33 @@
+paths:
+  static: ''
+  uploads: assets
+timezone: Europe/Bucharest
+markdown:
+  engine: commonmark
+  options:
+    gfm: true
+    linkify: false
+    table: false
+    strikethrough: false
+    subscript: false
+    superscript: false
+    heading_ids: false
+    breaks: false
+    xhtml: false
+    attributes: false
+    typographer: false
+    treat_indentation_as_code: true
+_snippets_imports:
+  hugo:
+    exclude:
+      - hugo_instagram
+collections_config:
+  pages:
+    path: ''
+    icon: wysiwyg
+  admin:
+    path: admin
+    icon: ad
+  blog:
+    path: blog
+    icon: event_available

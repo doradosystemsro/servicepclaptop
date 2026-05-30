@@ -7,13 +7,12 @@
 </head>
 <body style="margin: 0;">
 
-  <!-- Containerul în care Tina își încarcă toată interfața de editare -->
+  <!-- Containerul pentru interfata Tina -->
   <div id="root"></div>
 
-  <!-- Scriptul principal TinaCMS SPA pre-compilat -->
-  <script src="https://unpkg.com/tinacms@1.6.1/dist/index.js"></script>
+  <!-- Folosim ultima versiune stabila aliniata la serviciile v2 -->
+  <script src="https://unpkg.com/tinacms@latest/dist/index.js"></script>
   <script>
-    // Inițializăm aplicația direct cu datele proiectului tău din TinaCloud
     window.TinaCMS.init({
       clientId: "8640bb63-3016-4565-a65a-62829d5758f7",
       branch: "main",

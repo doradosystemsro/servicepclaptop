@@ -12,7 +12,7 @@ jobs:
       - name: Pune Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Instaleaza pachetele si compileaza
         run: |

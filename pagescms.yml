@@ -1,12 +1,13 @@
 media:
-  input: "images"
-  output: "/images"
+  input: "assets" # Folderul tău de imagini/stiluri pe care l-am văzut în listă
+  output: "/assets"
 
 collections:
   - name: blog
     label: "Articole Blog"
-    path: "blog"
+    path: "blog" # Folderul tău existent unde vrei să apară articolele
     type: file
+    format: html # Îi spunem să îți creeze direct pagini .html, nu text/markdown!
     fields:
       - name: title
         label: "Titlu Articol (H1)"

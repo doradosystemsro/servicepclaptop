@@ -2,19 +2,19 @@ import { defineConfig } from "tinacms";
 
 export default defineConfig({
   branch: "main", 
-  clientId: "8640bb63-3016-4565-a65a-62829d5758f7", // ID-ul tău unic
-  token: "AICI_VOM_PUNE_TOKENUL_COMANNDAT_MAI_TARZIU", 
+  clientId: "8640bb63-3016-4565-a65a-62829d5758f7", 
+  token: "AICI_VOM_PUNE_TOKENUL_MAI_TARZIU", 
   
   build: {
     outputFolder: "admin",
-    publicFolder: "public", 
+    publicFolder: ".", // Punctul înseamnă că folosești rădăcina site-ului tău HTML actual
   },
   schema: {
     collections: [
       {
         name: "post",
         label: "Articole Blog",
-        path: "content/blog", 
+        path: "blog", // <--- Aici i-am spus să salveze direct în folderul tău existent numit blog
         format: "md",
         fields: [
           { type: "string", name: "title", label: "Titlu Articol (H1)", isTitle: true, required: true },

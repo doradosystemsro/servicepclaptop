@@ -1,0 +1,25 @@
+name: Executa Setup Tina
+on:
+  workflow_dispatch:
+
+jobs:
+  tina-init:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copiaza codul
+        uses: actions/checkout@v4
+
+      - name: Pune Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Ruleaza comanda din checklist
+        run: |
+          npx @tinacms/cli@latest init --yes
+          npx @tinacms/cli@latest build
+
+      - name: Trimite fisierele inapoi pe Github
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Deblocare checklist TinaCloud"

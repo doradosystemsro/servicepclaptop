@@ -4,119 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Panou Administrare - Service PC Laptop</title>
+  <!-- Stilurile oficiale stabile -->
   <link rel="stylesheet" href="https://unpkg.com/tinacms@latest/dist/styles.css">
-  <style>
-    .login-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #13141f;
-      font-family: sans-serif;
-    }
-    .login-form {
-      background: #1c1d2e;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      width: 320px;
-      text-align: center;
-    }
-    .login-form h2 {
-      color: #fff;
-      margin-bottom: 20px;
-    }
-    .login-form input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #333652;
-      border-radius: 4px;
-      background: #13141f;
-      color: #fff;
-      box-sizing: border-box;
-    }
-    .login-form button {
-      width: 100%;
-      padding: 12px;
-      background: #22c55e;
-      border: none;
-      border-radius: 4px;
-      color: #fff;
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .login-form button:hover {
-      background: #16a34a;
-    }
-    .error-msg {
-      color: #ef4444;
-      margin-bottom: 15px;
-      display: none;
-      font-size: 14px;
-    }
-  </style>
 </head>
 <body style="margin: 0; background: #13141f;">
 
-  <div id="login-screen" class="login-container">
-    <div class="login-form">
-      <h2>Autentificare Service</h2>
-      <div id="error-box" class="error-msg">Utilizator sau parolă incorectă!</div>
-      <input type="text" id="username" placeholder="Utilizator" required>
-      <input type="password" id="password" placeholder="Parolă" required>
-      <button onclick="checkLogin()">Intră în Panou</button>
-    </div>
-  </div>
+  <!-- Containerul pentru CMS -->
+  <div id="root"></div>
 
-  <div id="root" style="display: none;"></div>
-
+  <!-- Incarcam scriptul de baza TinaCMS -->
+  <script src="https://unpkg.com/tinacms@latest/dist/index.js"></script>
   <script>
-    function checkLogin() {
-      const user = document.getElementById('username').value;
-      const pass = document.getElementById('password').value;
-      const errorBox = document.getElementById('error-box');
-
-      // AICI ÎȚI SETEZI USERUL ȘI PAROLA TA:
-      if (user === "admin" && pass === "Dorado2026!") {
-        // Ascundem ecranul de login și afișăm CMS-ul
-        document.getElementById('login-screen').style.display = 'none';
-        document.getElementById('root').style.display = 'block';
-        
-        // Încărcăm dinamic scriptul oficial Tina în mod local, ocolind complet cloud-ul lor
-        loadTinaCMS();
-      } else {
-        errorBox.style.display = 'block';
-      }
-    }
-
-    function loadTinaCMS() {
-      const script = document.createElement('script');
-      script.src = "https://unpkg.com/tinacms@latest/dist/index.js";
-      script.onload = () => {
-        window.TinaCMS.init({
-          clientId: "8640bb63-3016-4565-a65a-62829d5758f7",
-          branch: "main",
-          token: "c14c4e689dd6159dc6c5af7649cc30a6bc592dac",
-          isLocalBackend: true, // Forțăm modul local ca să nu ne mai ceară contul lor global!
-          schema: {
-            collections: [
+    window.TinaCMS.init({
+      clientId: "8640bb63-3016-4565-a65a-62829d5758f7",
+      branch: "main",
+      token: "c14c4e689dd6159dc6c5af7649cc30a6bc592dac",
+      isLocalBackend: false,
+      // Îi dăm schema direct aici, ca obiect nativ de JavaScript!
+      schema: {
+        collections: [
+          {
+            name: "post",
+            label: "Articole Blog",
+            path: "blog",
+            fields: [
               {
-                name: "post",
-                label: "Articole Blog",
-                path: "blog",
-                fields: [
-                  { type: "string", name: "title", label: "Titlu", isTitle: true, required: true },
-                  { type: "rich-text", name: "body", label: "Conținut" }
-                ]
+                type: "string",
+                name: "title",
+                label: "Titlu",
+                isTitle: true,
+                required: true
+              },
+              {
+                type: "rich-text",
+                name: "body",
+                label: "Continut"
               }
             ]
           }
-        });
-      };
-      document.body.appendChild(script);
-    }
+        ]
+      }
+    });
   </script>
 
 </body>

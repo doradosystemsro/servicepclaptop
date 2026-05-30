@@ -3,46 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panou Administrare - Dorado Systems</title>
-  <!-- Stilurile oficiale stabile -->
-  <link rel="stylesheet" href="https://unpkg.com/tinacms@latest/dist/styles.css">
+  <title>Panou Administrare Dorado Systems</title>
+  <link rel="stylesheet" href="https://unpkg.com/@tinacms/toolkit@latest/dist/styles.css">
 </head>
-<body style="margin: 0; background: #13141f;">
+<body style="margin: 0; background: #13141f; font-family: sans-serif;">
 
-  <!-- Containerul pentru CMS -->
-  <div id="root"></div>
+  <div id="tina-admin-root"></div>
 
-  <!-- Incarcam scriptul de baza TinaCMS -->
-  <script src="https://unpkg.com/tinacms@latest/dist/index.js"></script>
+  <!-- Scriptul oficial de backend independent -->
+  <script src="https://unpkg.com/@tinacms/boring-admin@latest/dist/index.js"></script>
   <script>
-    window.TinaCMS.init({
+    BoringAdmin.renderAdmin({
+      target: document.getElementById('tina-admin-root'),
       clientId: "8640bb63-3016-4565-a65a-62829d5758f7",
       branch: "main",
-      token: "c14c4e689dd6159dc6c5af7649cc30a6bc592dac",
-      isLocalBackend: false,
-      // Îi dăm schema direct aici, ca obiect nativ de JavaScript!
-      schema: {
-        collections: [
-          {
-            name: "post",
-            label: "Articole Blog",
-            path: "blog",
-            fields: [
-              {
-                type: "string",
-                name: "title",
-                label: "Titlu",
-                isTitle: true,
-                required: true
-              },
-              {
-                type: "rich-text",
-                name: "body",
-                label: "Continut"
-              }
-            ]
-          }
-        ]
+      isLocalBackend: false
+    });
+
+    // Forțăm activarea stării de editare la nivel global în fereastră
+    window.addEventListener('load', () => {
+      if (window.TinaCMS) {
+        // Ne asigurăm că interfața intră direct în modul activ de producție
+        window.TinaCMS.cms.flags.set("visual-editing", true);
       }
     });
   </script>

@@ -1,12 +1,1 @@
-{
-  "schema": {
-    "collections": [
-      {
-        "name": "post",
-        "label": "Articole Blog",
-        "path": "blog",
-        "format": "md"
-      }
-    ]
-  }
-}
+{}

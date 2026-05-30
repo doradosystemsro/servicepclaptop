@@ -5,7 +5,10 @@ export default defineConfig({
   clientId: "8640bb63-3016-4565-a65a-62829d5758f7", 
   token: process.env.TINA_TOKEN, 
   
-  // Am scos secțiunea "build" care îți strica folderele pe GitHub
+  build: {
+    outputFolder: "admin",
+    publicFolder: ".", 
+  },
   schema: {
     collections: [
       {

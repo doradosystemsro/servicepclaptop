@@ -3,10 +3,10 @@ import { defineConfig } from "tinacms";
 export default defineConfig({
   branch: "main",
   clientId: "8640bb63-3016-4565-a65a-62829d5758f7",
-  token: "c14c4e689dd6159dc6c5af7649cc30a6bc592dac", // Token-ul tău direct
+  token: "c14c4e689dd6159dc6c5af7649cc30a6bc592dac",
   build: {
-    outputFolder: "admin",
-    publicFolder: ".",
+    outputFolder: "admin", // Va genera folderul servicepclaptop.pages.dev/admin
+    publicFolder: ".",     // Rădăcina site-ului tău
   },
   schema: {
     collections: [

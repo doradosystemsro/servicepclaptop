@@ -1,0 +1,25 @@
+name: Generare folder Tina
+on:
+  workflow_dispatch: # Iti permite sa-l pornesti tu manual cu un buton
+
+jobs:
+  build-tina:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copiaza codul
+        uses: actions/checkout@v4
+
+      - name: Pune Node.js v24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Instaleaza si genereaza fisierele
+        run: |
+          npm install
+          npx tinacms build
+
+      - name: Trimite fisierele inapoi pe Github
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Adaugat folderul __generated__ si admin"

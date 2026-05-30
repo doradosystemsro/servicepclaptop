@@ -2,8 +2,8 @@ backend:
   name: github
   repo: doradosystemsro/servicepclaptop
   branch: main
-  base_url: https://servicepclaptop.pages.dev
-  auth_endpoint: api/auth
+  base_url: https://identity.netlify.com # Folosim poarta lor globala complet gratuita pentru autentificare directa
+  auth_endpoint: /v1/oauth
 
 media_folder: "assets"
 public_folder: "/assets"

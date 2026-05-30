@@ -16,7 +16,7 @@ jobs:
 
       - name: Ruleaza comanda din checklist
         run: |
-          npx @tinacms/cli@latest init --noTelemetry
+          npm install
           npx @tinacms/cli@latest build --noTelemetry
           
       - name: Trimite fisierele compilate inapoi pe Github

@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: doradosystemsro/servicepclaptop
+  name: git-gateway
   branch: main
-  base_url: https://servicepclaptop.pages.dev # Domeniul tau curat
-  auth_endpoint: api/auth # Rutarea nativa Cloudflare
 
 media_folder: "assets"
 public_folder: "/assets"

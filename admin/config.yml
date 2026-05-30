@@ -2,8 +2,8 @@ backend:
   name: github
   repo: doradosystemsro/servicepclaptop
   branch: main
-  base_url: https://decap-cms-oauth.vercel.app # Proxy stabil gratuit pentru autentificare GitHub
-  auth_endpoint: /auth
+  base_url: https://servicepclaptop.pages.dev # Domeniul tau curat
+  auth_endpoint: api/auth # Rutarea nativa Cloudflare
 
 media_folder: "assets"
 public_folder: "/assets"

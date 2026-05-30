@@ -1,0 +1,11 @@
+{
+  "name": "servicepclaptop",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npx @tinacms/cli@latest build"
+  },
+  "dependencies": {
+    "@tinacms/cli": "^1.5.28",
+    "tinacms": "^1.6.1"
+  }
+}

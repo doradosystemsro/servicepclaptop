@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: doradosystemsro/servicepclaptop # Pune aici userul tau/repo
+  branch: main
+
+media_folder: "assets/img" # Unde se salveaza pozele din articole
+public_folder: "/assets/img"
+
+collections:
+  - name: "blog"
+    label: "Articole Blog"
+    folder: "blog"
+    extension: "html"
+    format: "frontmatter"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titlu", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Corp Articol (HTML)", name: "body", widget: "code", default_language: "html" }

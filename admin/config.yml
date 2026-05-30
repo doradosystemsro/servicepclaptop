@@ -2,8 +2,8 @@ backend:
   name: github
   repo: doradosystemsro/servicepclaptop
   branch: main
-  base_url: https://identity.netlify.com # Folosim poarta lor globala complet gratuita pentru autentificare directa
-  auth_endpoint: /v1/oauth
+  base_url: https://decap-cms-oauth.vercel.app # Proxy stabil gratuit pentru autentificare GitHub
+  auth_endpoint: /auth
 
 media_folder: "assets"
 public_folder: "/assets"

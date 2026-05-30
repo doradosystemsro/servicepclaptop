@@ -27,12 +27,7 @@ export default defineConfig({
             label: "Titlu",
             isTitle: true,
             required: true,
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Continut",
-          },
+          }
         ],
       },
     ],

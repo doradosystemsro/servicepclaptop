@@ -10,13 +10,22 @@
 
   <div id="tina-admin-root"></div>
 
+  <!-- Scriptul oficial de backend independent -->
   <script src="https://unpkg.com/@tinacms/boring-admin@latest/dist/index.js"></script>
   <script>
     BoringAdmin.renderAdmin({
       target: document.getElementById('tina-admin-root'),
-      clientId: "8640bb63-3016-4565-a65a-62829d5758f7", // Client ID-ul tau
+      clientId: "8640bb63-3016-4565-a65a-62829d5758f7",
       branch: "main",
-      isLocalBackend: false // II SPUNEM CLAR CA NU E LOCAL!
+      isLocalBackend: false
+    });
+
+    // Forțăm activarea stării de editare la nivel global în fereastră
+    window.addEventListener('load', () => {
+      if (window.TinaCMS) {
+        // Ne asigurăm că interfața intră direct în modul activ de producție
+        window.TinaCMS.cms.flags.set("visual-editing", true);
+      }
     });
   </script>
 

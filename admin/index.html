@@ -3,24 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panou Administrare - Service PC Laptop</title>
+  <title>Panou Administrare - Dorado Systems</title>
   <!-- Stilurile oficiale stabile -->
   <link rel="stylesheet" href="https://unpkg.com/tinacms@latest/dist/styles.css">
 </head>
 <body style="margin: 0; background: #13141f;">
 
-  <!-- Containerul curat pentru CMS-ul clasic -->
+  <!-- Containerul pentru CMS -->
   <div id="root"></div>
 
   <!-- Incarcam scriptul de baza TinaCMS -->
   <script src="https://unpkg.com/tinacms@latest/dist/index.js"></script>
   <script>
-    // Initializam doar managerul de documente, fara functii de live preview care cer React
     window.TinaCMS.init({
       clientId: "8640bb63-3016-4565-a65a-62829d5758f7",
       branch: "main",
       token: "c14c4e689dd6159dc6c5af7649cc30a6bc592dac",
-      isLocalBackend: false
+      isLocalBackend: false,
+      // Îi dăm schema direct aici, ca obiect nativ de JavaScript!
+      schema: {
+        collections: [
+          {
+            name: "post",
+            label: "Articole Blog",
+            path: "blog",
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Titlu",
+                isTitle: true,
+                required: true
+              },
+              {
+                type: "rich-text",
+                name: "body",
+                label: "Continut"
+              }
+            ]
+          }
+        ]
+      }
     });
   </script>
 

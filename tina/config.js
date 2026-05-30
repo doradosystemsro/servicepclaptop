@@ -8,12 +8,6 @@ export default defineConfig({
     outputFolder: "admin",
     publicFolder: ".",
   },
-  media: {
-    tina: {
-      mediaRoot: "images",
-      publicFolder: ".",
-    },
-  },
   schema: {
     collections: [
       {
@@ -27,6 +21,11 @@ export default defineConfig({
             label: "Titlu",
             isTitle: true,
             required: true,
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Continut",
           }
         ],
       },

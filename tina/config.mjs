@@ -5,8 +5,8 @@ export default defineConfig({
   clientId: "8640bb63-3016-4565-a65a-62829d5758f7",
   token: "c14c4e689dd6159dc6c5af7649cc30a6bc592dac",
   build: {
-    outputFolder: "admin", // Va genera folderul servicepclaptop.pages.dev/admin
-    publicFolder: ".",     // Rădăcina site-ului tău
+    outputFolder: "admin",
+    publicFolder: ".",
   },
   schema: {
     collections: [

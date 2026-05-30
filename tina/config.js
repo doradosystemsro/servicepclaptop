@@ -3,7 +3,7 @@ import { defineConfig } from "tinacms";
 export default defineConfig({
   branch: "main", 
   clientId: "8640bb63-3016-4565-a65a-62829d5758f7", 
-  token: "AICI_VOM_PUNE_TOKENUL_MAI_TARZIU", 
+  token: process.env.TINA_TOKEN, 
   
   build: {
     outputFolder: "admin",

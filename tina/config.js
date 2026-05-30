@@ -3,7 +3,7 @@ import { defineConfig } from "tinacms";
 export default defineConfig({
   branch: "main",
   clientId: "30229e1e-35c2-4a48-8256-9f2100285071",
-  token: "3fd1f9ec5a37473f9cdafbe3493f8f533e523551",
+  token: "38a0d1f44a7cd046148f64f395ce6b507a70823a",
   build: {
     outputFolder: "admin",
     publicFolder: ".",
@@ -14,7 +14,6 @@ export default defineConfig({
         name: "post",
         label: "Articole Blog",
         path: "blog",
-        format: "html",
         fields: [
           {
             type: "string",
@@ -24,12 +23,9 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "string", // SCHIMBAT DIN RICH-TEXT ÎN STRING SIMPLU
+            type: "rich-text",
             name: "body",
-            label: "Continut HTML",
-            ui: {
-              component: "textarea" // Îi dă o cutie mare de text stabilă
-            }
+            label: "Continut",
           }
         ],
       },

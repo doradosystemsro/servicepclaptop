@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ce este memoria RAM și cum influențează viteza PC-ului? Află diferențele dintre DDR4 și DDR5, importanța profilului XMP și activarea Dual-Channel.">
+    <meta name="keywords" content="ghid memorie ram, activare dual channel, latenta cl ram, profil xmp bios, ddr4 vs ddr5, service pc bucuresti">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="RAM Memory | SERVICE PC LAPTOP">
+    <meta property="og:description" content="Totul despre frecvențe, latențe și configurarea corectă a memoriilor RAM pentru calculatoare și laptopuri de gaming.">
+    <title>RAM Memory | Service PC Laptop</title>
+    <link rel="canonical" href="https://servicepclaptop.com/ram-memory.html">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .article-container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .article-content h2 { text-align: left; margin-top: 35px; margin-bottom: 15px; color: var(--text-dark); font-size: 26px; }
+        .article-content p { line-height: 1.8; margin-bottom: 20px; color: #4b5563; font-size: 16px; }
+        .article-content ul { margin-left: 20px; margin-bottom: 20px; }
+        .article-content li { margin-bottom: 10px; color: #4b5563; }
+        .note-box { background-color: var(--primary-light); border-left: 4px solid var(--primary); padding: 20px; border-radius: var(--radius); margin: 30px 0; }
+        .note-box p { margin-bottom: 0; font-weight: 500; color: var(--text-dark); }
+        .article-link { color: var(--primary); font-weight: 700; text-decoration: underline; }
+        .article-link:hover { color: var(--primary-dark); }
+        .article-img-wrapper { margin: 30px 0; text-align: center; }
+        .article-img { max-width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow); border: 1px solid var(--border); }
+        .img-caption { display: block; margin-top: 10px; font-size: 14px; color: var(--text-light); font-style: italic; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💻</span>
+                <span class="logo-text">Service PC Laptop</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="servicii.html">Servicii</a></li>
+                <li><a href="blog.html">Articole</a></li>
+                <li><a href="portofoliu.html">Portofoliu</a></li>
+                <li><a href="contact.html" class="btn-contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <span style="color: var(--secondary); font-weight: 700; font-size: 14px; text-transform: uppercase;">Optimizare Performanță</span>
+            <h1 style="margin-top: 10px;">Memoria RAM a calculatorului: Cum funcționează și cum obții viteza maximă</h1>
+            <p>Ghidul complet despre capacitate, frecvențe în MHz, latențe CAS și secretele asamblării în sloturile corecte pentru a evita pierderile de cadre în jocuri.</p>
+        </div>
+    </header>
+
+    <main class="article-container">
+        <div class="article-content" data-editable="source" data-path="ram-memory.html" data-key="body">
+            <p>Memoria RAM (Random Access Memory) este spațiul de lucru ultra-rapid al calculatorului tău. Spre deosebire de un SSD sau hard disk, unde fișierele rămân salvate permanent, memoria RAM stochează temporar datele de care procesorul are nevoie chiar în acea secundă pentru a rula sistemul de operare, jocurile sau aplicațiile deschise. Cu cât memoria este mai rapidă și mai bine configurată, cu atât procesorul va procesa informațiile fără timpi morți.</p>
+            
+            <p>Multe persoane fac greșeala de a privi doar capacitatea totală (cum ar fi 16GB sau 32GB), ignorând complet frecvența, latențele și modul fizic de instalare în placa de bază, detalii care pot tăia până la 20% din performanța reală a sistemului hardware.</p>
+
+            <h2>DDR4 vs. DDR5: Diferențele tehnice generaționale</h2>
+            <p>În prezent, piața este împărțită între două mari tehnologii. Standardul **DDR4**, matur și accesibil ca preț, operează de regulă la frecvențe cuprinse între 2400 MHz și 3600 MHz. Noua geração, **DDR5**, aduce o arhitectură complet refăcută, pornind de la viteze de 4800 MHz și trecând lejer de 7200 MHz în cazul modulelor premium de gaming.</p>
+            
+            <p>Pe lângă viteza brută, modulele DDR5 au mutat controlul tensiunii (cipul PMIC) direct pe plăcuța de RAM, scoțându-l de pe placa de bază, ceea ce asigură o alimentare mult mai stabilă, dar crește și temperatura de operare a memoriilor, solicitând radiatoare metalice de calitate.</p>
+        </div>
+
+        <div class="article-img-wrapper" data-editable="source" data-path="ram-memory.html" data-key="main-image">
+            <img src="assets/images/PC-power-supply-cables.jpg" class="article-img" alt="Instalarea placutelor de memorie RAM in sloturile DIMM ale placii de baza" id="article-main-image">
+            <span class="img-caption">Foto: Montarea modulelor RAM în sloturile DIMM 2 și 4 pentru activarea automată a tehnologiei Dual-Channel.</span>
+        </div>
+
+        <div class="article-content" data-editable="source" data-path="ram-memory.html" data-key="body-content">
+            <h2>Regula de Aur: Activarea modului Dual-Channel și profilul XMP / EXPO</h2>
+            <p>Dating o singură plăcuță de RAM (Single Channel), lățimea de bandă prin care datele circulă către procesor este tăiată la jumătate. Pentru performanțe optime, este obligatoriu să folosești modulele în pereche de câte două (Dual Channel). Pe majoritatea plăcilor de bază cu 4 sloturi, plăcuțele trebuie introduse în sloturile **2 și 4** (numărate de la procesor spre exterior) ca să activeze această funcție.</p>
+            
+            <p>O altă mare capcană: când cumperi memorii rapide (de exemplu, DDR4 la 3200 MHz), ele vor porni standard din fabrică la o viteză de bază sigură (2133 MHz). Ca să ruleze la frecvența maximă înscrisă pe cutie, trebuie să intri în BIOS-ul calculatorului și să activezi profilul **XMP** (pentru platforme Intel) sau **EXPO** (pentru AMD). Altfel, ai plătit pentru performanță pe care nu o folosești!</p>
+
+            <div class="note-box">
+                <p>🔧 În service-ul nostru situat în București, Sector 6, Strada Aleșd nr. 10, realizăm upgrade-uri de memorie RAM pentru laptopuri (format SODIMM) și desktop-uri (format DIMM). Rulăm teste de diagnosticare dure (MemTest86) pentru a depista modulele defecte care provoacă celebrele ecrane albastre (BSOD) și oferim consultanță gratuită la sediu.</p>
+            </div>
+
+            <h2>Interconectarea cu restul ghidurilor noastre</h2>
+            <p>Viteza memoriei RAM este direct dictată de magistralele integrate în placa de bază. Pentru a înțelege cum gestionează chipset-ul aceste fluxuri masive de date, consultă <a href="the-computer-motherboard.html" class="article-link">Ghidul de Arhitectură al Plăcii de Bază PC</a>. Dacă ești în faza de asamblare a unui PC de la zero și vrei să te asiguri de compatibilitatea fizică dintre coolerele mari și înălțimea plăcuțelor de RAM, citește <a href="asimblare-pc-gaming-custom-componente-compatibilitate.html" class="article-link">Ghidul de Asamblare PC Gaming Custom</a>.</p>
+            
+            <p>Asigură-te de asemenea că sistemul tău are o sursă capabilă să livreze tensiuni stabile pe liniile secundare citind <a href="alegere-si-brassamblare-sursa-alimentare-pc.html" class="article-link">Alegerea și Instalarea Sursei de Alimentare PC</a> sau vezi cum protejăm cipurile de supraîncălzire în articolul de laborator <a href="pasta-termica-thermal-putty-metal-lichid-laptop.html" class="article-link">Pastă Termică vs. Thermal Putty vs. Metal Lichid</a>.</p>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <h3>Sistemul tău se blochează aleatoriu sau jocurile se închid singure fără eroare?</h3>
+                <p style="margin-bottom: 25px;">Memoria RAM defectă sau incompatibilă este cauza principală a instabilității. Diagnosticarea la noi este complet gratuită.</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Solicită Diagnosticare Gratuită RAM</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Service PC Laptop</h4>
+                <p>Mentenanță preventivă avansată realizată la nivel industrial și reparații electronice de precizie în București.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigare</h4>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="servicii.html">Servicii</a></li>
+                    <li><a href="blog.html">Articole</a></li>
+                    <li><a href="portofoliu.html">Portofoliu</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Rapid</h4>
+                <p>Telefon / WhatsApp: 0744922422</p>
+                <p>Locație: Strada Aleșd nr. 10, Sector 6, București</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Service PC Laptop. Toate drepturile rezervate. | <a href="termeni-conditii-politica-confidentialitate.html" style="color: inherit; text-decoration: none;">Termeni și Condiții (DORADO SYSTEMS®)</a></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

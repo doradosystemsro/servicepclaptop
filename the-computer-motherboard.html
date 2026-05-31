@@ -65,7 +65,7 @@
         </div>
 
         <div class="article-img-wrapper" data-editable="source" data-path="the-computer-motherboard.html" data-key="main-image">
-            <img src="assets/images/The-computer-motherboard-1200x800.jpg" alt="Placa de baza a calculatorului">
+            <img src="assets/images/The-computer-motherboard-1200x800.jpg" class="article-img" alt="Placa de baza a calculatorului cu circuite complexe si trasee de cupru" id="article-main-image">
             <span class="img-caption">Foto: Arhitectura de circuite imprimate multi-strat a unei plăci de bază moderne, gata de echipare cu componente.</span>
         </div>
 
@@ -73,12 +73,12 @@
             <h2>Cum este proiectată și fabricată o placă de bază?</h2>
             <p>Procesul de design și producție al unei plăci de bază este lung și extrem de riguros. Dezvoltarea unei noi platforme implică o colaborare strânsă cu producătorii de cipuri ai procesoarelor centrale (Intel sau AMD). Plăcile de ultimă generație sunt concepute pentru a integra instantaneu noile progrese tehnologice. Pe baza aceluiași chipset central, producătorul va dezvolta linii diferite de produse (low-end, mid-range sau high-end), specificațiile finale fiind direct dictate de segmentul de preț vizat.</p>
             
-            <p>Deși s-ar putea crede că aceste hardware-uri sunt construite exclusiv pe linii complet automatizate, procesul industrial se bazează parțial și pe munca manuală de înaltă precizie. Prima etapă constă în aplicarea automată a tehnologiei SMD (Surface Mount Technology) pe un circuit imprimat brut (blank PCB), circuitele fiind trecute prin cuptoare speciale de reflow pentru topirea precisă a aliajului de lipit.</p>
+            <p>Deși s-ar putea crede că aceste hardware-uri sunt construites exclusiv pe linii complet automatizate, procesul industrial se bazează parțial și pe munca manuală de înaltă precizie. Prima etapă constă în aplicarea automată a tehnologiei SMD (Surface Mount Technology) pe un circuit imprimat brut (blank PCB), circuitele fiind trecute prin cuptoare speciale de reflow pentru topirea precisă a aliajului de lipit.</p>
             
             <p>Ulterior, componentele masive (solide) sunt montate manual de tehnicieni înainte ca placa să treacă în zona de inspecție optică și testare electronică. Fiecare unitate este supusă unui test de stres termic dur (burn-in test), menit să simuleze cele mai dure condiții de utilizare pe care calculatorul le va întâlni pe parcursul anilor de funcționare. Întregul flux tehnologic de asamblare durează aproximativ 15 minute per placă.</p>
 
             <h2>Rolul procesorului și logica chipset-ului integrat</h2>
-            <p>Chipset-ul plăcii de bază este o tehnologie fixă, lipită din fabrică (BGA) și optimizată să lucreze cu o anumită microarhitectură de procesoare. Acesta nu poate fi eliminat sau upgradat independent și dictează în totalitate lista de procesoare compatibile cu socket-ul fizic.</p>
+            <p>Chipset-ul plăcii de bază este o tehnologie fixă, lipită din fabrică (BGA) și optimizată să lucreze cu o anumită microarhitectură de profesoare. Acesta nu poate fi eliminat sau upgradat independent și dictează în totalitate lista de procesoare compatibile cu socket-ul fizic.</p>
             
             <h3>Magistralele de date și viteza BUS</h3>
             <p>Termenul „BUS” (magistrală) descrie autostrăzile electronice de transfer de date dintre componente. Conceptul este împrumutat din ingineria electrică grea (barele de cupru care conduc electricitatea în stațiile de putere). Viteza acestei magistrale determină cantitatea de informație ce poate fi transferată într-o secundă și se măsoară în Megahertz (MHz).</p>
@@ -87,13 +87,13 @@
             <p>Tradițional, fluxurile majore de date de pe placa de bază erau gestionate de două controlere strategice concepute pentru a preveni gâtuirea (bottleneck) performanței:</p>
             <ul>
                 <li><strong>Northbridge (Memory Controller Hub):</strong> Situat în partea superioară, controla comunicarea critică de mare viteză dintre procesorul central (CPU), placa video (GPU) și memoria RAM. În procesoarele moderne, acest controller a fost integrat direct în pastila de siliciu a CPU-ului.</li>
-                <li><strong>Southbridge (I/O Controller Hub):</strong> Situat în partea inferioară, gestionează comunicațiile mai lente de intrare/ieșire: sloturile de expansiune PCI, ceasul în timp real (RTC), controlerele de stocare, managementul de consum electric și porturile periferice.</li>
+                <li><strong>Southbridge (I/O Controller Hub):</strong> Situat în partea inferioră, gestionează comunicațiile mai lente de intrare/ieșire: sloturile de expansiune PCI, ceasul în timp real (RTC), controlerele de stocare, managementul de consum electric și porturile periferice.</li>
             </ul>
         </div>
 
         <div class="article-img-wrapper" data-editable="source" data-path="the-computer-motherboard.html" data-key="secondary-image">
-            <img src="assets/images/CPU-socket-1200x800.jpg" alt="Soclul procesorului CPU socket">
-            <span class="img-caption">Foto: Detaliu de service IT Profesional captat deasupra pinilor sensibili din interiorul unui soclu (socket) de procesor modern.</span>
+            <img src="assets/images/CPU-socket-1200x800.jpg" class="article-img" alt="Soclul procesorului CPU socket de tip LGA pe o placa de baza" id="article-secondary-image">
+            <span class="img-caption">Foto: Detaliu de laborator asupra pinilor sensibili din interiorul unui soclu (socket) de procesor modern.</span>
         </div>
 
         <div class="article-content" data-editable="source" data-path="the-computer-motherboard.html" data-key="body-content-2">
@@ -111,11 +111,11 @@
             </ul>
 
             <div class="note-box">
-                <p>🔧 În service-ul nostru din București, Sector 6, Strada Aleșd nr. 10, deținem echipamente industriale de micro-lipire BGA pentru repararea sau înlocuirea circuitelor arse de pe plăcile de bază. Diagnoza componentelor hardware este complet gratuită, iar reparațiile se realizează direct în service, nu prin intermediari.</p>
+                <p>🔧 În service-ul nostru independent din București, Sector 6, Strada Aleșd nr. 10, deținem echipamente industriale de micro-lipire BGA pentru repararea sau înlocuirea circuitelor arse de pe plăcile de bază. Diagnoza componentelor hardware este complet gratuită, iar reparațiile se realizează direct în service, nu prin intermediari.</p>
             </div>
 
             <h2>Interconectarea cu rețeaua noastră de ghiduri hardware</h2>
-            <p>O funcționare corectă a plăcii de bază este direct dictată de calitatea curentului electric primit; parcurge instrucțiunile esențiale din <a href="alegere-si-asamblare-sursa-alimentare-pc.html" class="article-link">Alegerea și Instalarea Sursei de Alimentare PC</a>. Modul în care modulele de memorie DIMM interacționează cu liniile de comunicație ale chipset-ului este documentat pe larg în <a href="ram-memory.html" class="article-link">Ghidul de Optimizare al Memoriei RAM</a>.</p>
+            <p>O funcționare corectă a plăcii de bază este direct dictată de calitatea curentului electric primit; parcurge instrucțiunile esențiale din <a href="pc-power-supply-acquisition-and-assembly.html" class="article-link">Alegerea și Instalarea Sursei de Alimentare PC</a>. Modul în care modulele de memorie DIMM interacționează cu liniile de comunicație ale chipset-ului este documentat pe larg în <a href="ram-memory.html" class="article-link">Ghidul de Optimizare al Memoriei RAM</a>.</p>
             
             <p>Dacă vrei să înțelegi cum accesează liniile ultra-rapide PCIe stocarea de tip NVMe, citește <a href="ssd-solid-state-drive.html" class="article-link">Ghidul Tehnic al Unităților SSD</a>. De asemenea, poți studia modul în care protejăm micro-componentele SMD din jurul socket-ului împotriva scurtcircuitelor din <a href="pasta-termica-thermal-putty-metal-lichid-laptop.html" class="article-link">Pastă Termică vs. Thermal Putty vs. Metal Lichid</a> sau regulile generale din <a href="asimblare-pc-gaming-custom-componente-compatibilitate.html" class="article-link">Ghidul de Asamblare PC Gaming Custom</a>.</p>
 

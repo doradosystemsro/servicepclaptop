@@ -65,7 +65,7 @@
         </div>
 
         <div class="article-img-wrapper" data-editable="source" data-path="the-computer-motherboard.html" data-key="main-image">
-            <img src="assets/images/The-computer-motherboard-1200x800.jpg" class="article-img" alt="Placa de baza a calculatorului cu circuite complexe si trasee de cupru" id="article-main-image">
+            <img src="images/The-computer-motherboard-1200x800.jpg" class="article-img" alt="Placa de baza a calculatorului cu circuite complexe si trasee de cupru" id="article-main-image">
             <span class="img-caption">Foto: Arhitectura de circuite imprimate multi-strat a unei plăci de bază moderne, gata de echipare cu componente.</span>
         </div>
 
@@ -73,12 +73,12 @@
             <h2>Cum este proiectată și fabricată o placă de bază?</h2>
             <p>Procesul de design și producție al unei plăci de bază este lung și extrem de riguros. Dezvoltarea unei noi platforme implică o colaborare strânsă cu producătorii de cipuri ai procesoarelor centrale (Intel sau AMD). Plăcile de ultimă generație sunt concepute pentru a integra instantaneu noile progrese tehnologice. Pe baza aceluiași chipset central, producătorul va dezvolta linii diferite de produse (low-end, mid-range sau high-end), specificațiile finale fiind direct dictate de segmentul de preț vizat.</p>
             
-            <p>Deși s-ar putea crede că aceste hardware-uri sunt construites exclusiv pe linii complet automatizate, procesul industrial se bazează parțial și pe munca manuală de înaltă precizie. Prima etapă constă în aplicarea automată a tehnologiei SMD (Surface Mount Technology) pe un circuit imprimat brut (blank PCB), circuitele fiind trecute prin cuptoare speciale de reflow pentru topirea precisă a aliajului de lipit.</p>
+            <p>Deși s-ar putea crede că aceste hardware-uri sunt construite exclusiv pe linii complet automatizate, procesul industrial se bazează parțial și pe munca manuală de înaltă precizie. Prima etapă constă în aplicarea automată a tehnologiei SMD (Surface Mount Technology) pe un circuit imprimat brut (blank PCB), circuitele fiind trecute prin cuptoare speciale de reflow pentru topirea precisă a aliajului de lipit.</p>
             
             <p>Ulterior, componentele masive (solide) sunt montate manual de tehnicieni înainte ca placa să treacă în zona de inspecție optică și testare electronică. Fiecare unitate este supusă unui test de stres termic dur (burn-in test), menit să simuleze cele mai dure condiții de utilizare pe care calculatorul le va întâlni pe parcursul anilor de funcționare. Întregul flux tehnologic de asamblare durează aproximativ 15 minute per placă.</p>
 
             <h2>Rolul procesorului și logica chipset-ului integrat</h2>
-            <p>Chipset-ul plăcii de bază este o tehnologie fixă, lipită din fabrică (BGA) și optimizată să lucreze cu o anumită microarhitectură de profesoare. Acesta nu poate fi eliminat sau upgradat independent și dictează în totalitate lista de procesoare compatibile cu socket-ul fizic.</p>
+            <p>Chipset-ul plăcii de bază este o tehnologie fixă, lipită din fabrică (BGA) și optimizată să lucreze cu o anumită microarhitectură de procesoare. Acesta nu poate fi eliminat sau upgradat independent și dictează în totalitate lista de procesoare compatibile cu socket-ul fizic.</p>
             
             <h3>Magistralele de date și viteza BUS</h3>
             <p>Termenul „BUS” (magistrală) descrie autostrăzile electronice de transfer de date dintre componente. Conceptul este împrumutat din ingineria electrică grea (barele de cupru care conduc electricitatea în stațiile de putere). Viteza acestei magistrale determină cantitatea de informație ce poate fi transferată într-o secundă și se măsoară în Megahertz (MHz).</p>
@@ -87,12 +87,12 @@
             <p>Tradițional, fluxurile majore de date de pe placa de bază erau gestionate de două controlere strategice concepute pentru a preveni gâtuirea (bottleneck) performanței:</p>
             <ul>
                 <li><strong>Northbridge (Memory Controller Hub):</strong> Situat în partea superioară, controla comunicarea critică de mare viteză dintre procesorul central (CPU), placa video (GPU) și memoria RAM. În procesoarele moderne, acest controller a fost integrat direct în pastila de siliciu a CPU-ului.</li>
-                <li><strong>Southbridge (I/O Controller Hub):</strong> Situat în partea inferioră, gestionează comunicațiile mai lente de intrare/ieșire: sloturile de expansiune PCI, ceasul în timp real (RTC), controlerele de stocare, managementul de consum electric și porturile periferice.</li>
+                <li><strong>Southbridge (I/O Controller Hub):</strong> Situat în partea inferioară, gestionează comunicațiile mai lente de intrare/ieșire: sloturile de expansiune PCI, ceasul în timp real (RTC), controlerele de stocare, managementul de consum electric și porturile periferice.</li>
             </ul>
         </div>
 
         <div class="article-img-wrapper" data-editable="source" data-path="the-computer-motherboard.html" data-key="secondary-image">
-            <img src="assets/images/CPU-socket-1200x800.jpg" class="article-img" alt="Soclul procesorului CPU socket de tip LGA pe o placa de baza" id="article-secondary-image">
+            <img src="images/CPU-socket-1200x800.jpg" class="article-img" alt="Soclul procesorului CPU socket de tip LGA pe o placa de baza" id="article-secondary-image">
             <span class="img-caption">Foto: Detaliu de laborator asupra pinilor sensibili din interiorul unui soclu (socket) de procesor modern.</span>
         </div>
 
@@ -103,7 +103,7 @@
             <ul>
                 <li><strong>Soclul Procesorului (CPU Socket):</strong> Zona unde se instalează fizic procesorul. Crestăturile (notches) speciale de pe margini permit inserția cipului într-o singură direcție sigură, fiind fixat de un mecanism robust de pârghii metalice.</li>
                 <li><strong>Conectorul Principal de Alimentare (ATX Power):</strong> Cea mai mare mufă tată de pe placă, având 24 de pini. Suplimentar, în colțul stânga-sus, se află conectorii auxiliari de 12V (4 sau 8 pini) dedicați exclusiv etajului VRM al procesorului.</li>
-                <li><strong>Sloturile de Memorie RAM:</strong> Canale prevăzute cu cleme laterale de blocare automată. Acestea au ghidaje fizice specifice standardului (DDR4 sau DDR5) pentru a preveni montarea unor module incompatibile.</li>
+                <li><strong>Sloturile de Memorie RAM:</strong> Canale prevăzute cu cleme laterale de blocare automată. Acestea au ghidaje physical specifice standardului (DDR4 sau DDR5) pentru a preveni montarea unor module incompatibile.</li>
                 <li><strong>Conectorii SATA și IDE/PATA:</strong> Interfețele de stocare. Standardul modern SATA folosește o mufă mică în formă de „L” pentru a ghida cablul corect, în timp ce vechiul format IDE cu două rânduri de pini (PATA) se mai regăsește doar pe plăci legacy.</li>
                 <li><strong>Sloturile de Expansiune Grafică (PCI-Express):</strong> Interfețe rapide dotate cu o siguranță la capăt pentru fixarea fermă a plăcilor video moderne, înlocuind complet vechile standarde AGP sau PCI clasic. Permit inclusiv tehnologii multi-GPU ca Nvidia SLI sau ATI Crossfire.</li>
                 <li><strong>Header-ele Interne:</strong> Grupuri de pini grupați pe suprafața plăcii care fac legătura cu porturile USB și mufele audio HD/Microfon poziționate pe panoul frontal al carcasei.</li>
@@ -111,7 +111,7 @@
             </ul>
 
             <div class="note-box">
-                <p>🔧 În service-ul nostru independent din București, Sector 6, Strada Aleșd nr. 10, deținem echipamente industriale de micro-lipire BGA pentru repararea sau înlocuirea circuitelor arse de pe plăcile de bază. Diagnoza componentelor hardware este complet gratuită, iar reparațiile se realizează direct în service, nu prin intermediari.</p>
+                <p>🔧 În cadrul service-ului nostru din București, Sector 6, Strada Aleșd nr. 10, deținem echipamente industriale de micro-lipire BGA pentru repararea sau înlocuirea circuitelor arse de pe plăcile de bază. Diagnoza componentelor hardware este complet gratuită, iar reparațiile se realizează direct în service, nu în laboratoare externe.</p>
             </div>
 
             <h2>Interconectarea cu rețeaua noastră de ghiduri hardware</h2>

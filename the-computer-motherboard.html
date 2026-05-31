@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ghidul suprem despre placa de bază a calculatorului. Află cum funcționează etajul de alimentare VRM, chipset-ul și de ce răcirea componentelor previne defecțiunile.">
+    <meta name="keywords" content="arhitectura placa de baza pc, ce este vrm placa de baza, chipset amd intel, ghid componente calculator, service pc bucuresti">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Understanding the Computer Motherboard: The Ultimate Guide to the Backbone of Your PC">
+    <meta property="og:description" content="O analiză detaliată a componentelor de pe placa de bază, de la socket și linii PCIe, până la importanța fazelor de alimentare.">
+    <title>Understanding the Computer Motherboard: The Ultimate Guide to the Backbone of Your PC | Service PC Laptop</title>
+    <link rel="canonical" href="https://servicepclaptop.com/the-computer-motherboard.html">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .article-container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .article-content h2 { text-align: left; margin-top: 35px; margin-bottom: 15px; color: var(--text-dark); font-size: 26px; }
+        .article-content h3 { text-align: left; margin-top: 25px; margin-bottom: 10px; color: var(--text-dark); font-size: 20px; }
+        .article-content p { line-height: 1.8; margin-bottom: 20px; color: #4b5563; font-size: 16px; }
+        .article-content ul { margin-left: 20px; margin-bottom: 20px; }
+        .article-content li { margin-bottom: 10px; color: #4b5563; }
+        .note-box { background-color: var(--primary-light); border-left: 4px solid var(--primary); padding: 20px; border-radius: var(--radius); margin: 30px 0; }
+        .note-box p { margin-bottom: 0; font-weight: 500; color: var(--text-dark); }
+        .article-link { color: var(--primary); font-weight: 700; text-decoration: underline; }
+        .article-link:hover { color: var(--primary-dark); }
+        .article-img-wrapper { margin: 30px 0; text-align: center; }
+        .article-img { max-width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow); border: 1px solid var(--border); }
+        .img-caption { display: block; margin-top: 10px; font-size: 14px; color: var(--text-light); font-style: italic; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💻</span>
+                <span class="logo-text">Service PC Laptop</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="servicii.html">Servicii</a></li>
+                <li><a href="blog.html">Articole</a></li>
+                <li><a href="portofoliu.html">Portofoliu</a></li>
+                <li><a href="contact.html" class="btn-contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <span style="color: var(--secondary); font-weight: 700; font-size: 14px; text-transform: uppercase;">Arhitectură Hardware</span>
+            <h1 style="margin-top: 10px;">Placa de bază a calculatorului: Ghidul suprem pentru coloana vertebrală a PC-ului</h1>
+            <p>Cum interconectează circuitele complexe toate componentele hardware, ce rol joacă etajul VRM în stabilitate și cum alegi formatul corect.</p>
+        </div>
+    </header>
+
+    <main class="article-container">
+        <div class="article-content" data-editable="source" data-path="the-computer-motherboard.html" data-key="body">
+            <p>Placa de bază (motherboard) este fundația pe care este construit orice computer. Deși procesoarele și plăcile video atrag toată atenția când vine vorba de performanța brută în jocuri sau editare, nicio componentă nu poate funcționa fără autostrăzile de circuite (liniile PCIe) și controlerele inteligente integrate pe placa de bază. Ea dictează opțiunile de upgrade, stabilitatea curentului și durata de viață a sistemului.</p>
+            
+            <p>În acest ghid de laborator, descompunem placa de bază în elementele ei esențiale, oferindu-ți detaliile tehnice necesare pentru a înțelege cum funcționează electronica din spatele carcasei tale.</p>
+
+            <h2>Anatomia unei plăci de bază: Componentele vitale explicate</h2>
+            <p>La o simplă privire pe textură, o placă modernă pare o mizerie de trasee de cupru și piese sudate. În realitate, arhitectura sa este organizată chirurgical pe module:</p>
+            
+            <ul>
+                <li><strong>Socket-ul (Soclul procesorului):</strong> Locul fizic unde se instalează CPU-ul. Intel folosește în prezent formate de tip LGA (pinii sunt pe placă), în timp ce AMD a trecut și el la LGA odată cu platforma AM5. Socket-ul determină strict ce generație de procesor poți monta.</li>
+                <li><strong>Chipset-ul (Creierul secundar):</strong> Un cip integrat (cum ar fi Intel Z790 sau AMD B650) care gestionează fluxul de date dintre procesor și restul dispozitivelor: porturi USB, stocare SATA, plăci de rețea și sloturi NVMe.</li>
+                <li><strong>Sloturile DIMM pentru RAM:</strong> Zonele unde se montează modulele de memorie, moderne fiind standardele DDR4 și DDR5.</li>
+            </ul>
+        </div>
+
+        <div class="article-img-wrapper" data-editable="source" data-path="the-computer-motherboard.html" data-key="main-image">
+            <img src="assets/images/reparatie-placa-baza-laptop-microscop.webp" class="article-img" alt="Inspectia componentelor electronice si a chipset-ului pe o placa de baza" id="article-main-image">
+            <span class="img-caption">Foto: Analiza circuitelor de lângă socket și a sloturilor de expansiune PCIe direct pe bancul de lucru.</span>
+        </div>
+
+        <div class="article-content" data-editable="source" data-path="the-computer-motherboard.html" data-key="body-content">
+            <h2>Etajul de alimentare VRM: Cel mai important element pentru stabilitate</h2>
+            <p>VRM-ul (Voltage Regulator Module) este un circuit electronic critic situat în imediata apropiere a procesorului. Rolul său este de a transforma tensiunea de 12V primită de la sursa de alimentare într-o valoare mult mai mică și extrem de stabilă (în jur de 1.2V - 1.3V) necesară funcționării procesorului.</p>
+            
+            <p>Un VRM de calitate este compus din mai multe faze de alimentare, bobine de feroită și condensatori solizi. Cu cât etajul are mai multe faze, cu atât curentul livrat este mai curat, iar căldura generată este împărțită pe o suprafață mai mare. VRM-urile ieftine și lăsate fără răcire adecvată se încing frecvent la peste 100°C, provocând restartări subite sau chiar arderea condensatorilor.</p>
+
+            <div class="note-box">
+                <p>🔧 În service-ul nostru din București, Sector 6, Strada Aleșd nr. 10, diagnosticăm și reparăm la nivel microscopic defecțiunile etajelor VRM arse sau scurtcircuitate. Dacă sistemul tău a suferit o daună electrică majoră, vezi cum intervenim în laborator în <a href="ghid-complet-reparatie-placa-de-baza-laptop.html" class="article-link">Ghidul de Reparație Plăci de Bază</a>.</p>
+            </div>
+
+            <h2>Formate fizice (Form Factors) și fluxul de aer din carcasă</h2>
+            <p>Plăcile de bază vin în dimensiuni standardizate, cele mai populare fiind **ATX** (standard), **Micro-ATX** (mediu) și **Mini-ITX** (foarte compact). Alegerea formatului dictează direct ce carcasă trebuie să cumperi, dar și modul în care aerul va circula printre piese.</p>
+            
+            <p>În special pe plăcile mATX sau ITX, piesele sunt foarte înghesuite, ceea ce înseamnă că temperaturile vor crește mult mai repede. De aceea, managementul corect al cablurilor și calibrarea ventilatoarelor devin obligatorii pentru a menține componentele sub pragul critic.</p>
+
+            <h2>Linkuri utile și mentenanță preventivă</h2>
+            <p>Dacă vrei să înveți cum să montezi corect o sursă de alimentare puternică fără să distrugi pinii sensibili ai plăcii prin scurtcircuit, parcurge ghidul nostru tehnic despre <a href="alegere-si-asamblare-sursa-alimentare-pc.html" class="article-link">Alegerea și Instalarea Sursei de Alimentare PC</a>. Pentru detalii complete despre configurarea unui computer stabil, cu un airflow optim, citește <a href="asimblare-pc-gaming-custom-componente-compatibilitate.html" class="article-link">Ghidul de Asamblare PC Gaming Custom și Compatibilitate</a>.</p>
+            
+            <p>Nu uita că inamicul numărul unu al circuitelor este supraîncălzirea. Află cum protejăm noi cipurile împotriva degradării din articolul <a href="pasta-termica-thermal-putty-metal-lichid-laptop.html" class="article-link">Pastă Termică vs. Thermal Putty vs. Metal Lichid</a>.</p>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <h3>Ai nevoie de un upgrade de procesor sau vrei să testezi stabilitatea plăcii tale de bază?</h3>
+                <p style="margin-bottom: 25px;">La noi în service, diagnosticarea componentelor este întotdeauna gratuită. Te așteptăm pe Strada Aleșd nr. 10.</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Solicită Verificare Gratuită PC</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Service PC Laptop</h4>
+                <p>Mentenanță preventivă avansată realizată la nivel industrial și reparații electronice de precizie în București.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigare</h4>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="servicii.html">Servicii</a></li>
+                    <li><a href="blog.html">Articole</a></li>
+                    <li><a href="portofoliu.html">Portofoliu</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Rapid</h4>
+                <p>Telefon / WhatsApp: 0744922422</p>
+                <p>Locație: Strada Aleșd nr. 10, Sector 6, București</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Service PC Laptop. Toate drepturile rezervate. | <a href="termeni-conditii-politica-confidentialitate.html" style="color: inherit; text-decoration: none;">Termeni și Condiții (DORADO SYSTEMS®)</a></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

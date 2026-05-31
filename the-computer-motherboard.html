@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ghidul suprem despre placa de bază a calculatorului. Află cum funcționează etajul de alimentare VRM, chipset-ul și de ce răcirea componentelor previne defecțiunile.">
-    <meta name="keywords" content="arhitectura placa de baza pc, ce este vrm placa de baza, chipset amd intel, ghid componente calculator, service pc bucuresti">
+    <meta name="description" content="Ghidul complet despre placa de bază a calculatorului. Descoperă cum funcționează circuitele, etajele Northbridge/Southbridge, formatele ATX și pașii de diagnosticare în service.">
+    <meta name="keywords" content="arhitectura placa de baza pc, socket procesor lga, chipset northbridge southbridge, form factor atx matx, service pc bucuresti sector 6">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Understanding the Computer Motherboard: The Ultimate Guide to the Backbone of Your PC">
-    <meta property="og:description" content="O analiză detaliată a componentelor de pe placa de bază, de la socket și linii PCIe, până la importanța fazelor de alimentare.">
+    <meta property="og:description" content="O analiză detaliată a componentelor de pe placa de bază, de la controllerul de memorie și magistralele de date, până la porturile de expansiune.">
     <title>Understanding the Computer Motherboard: The Ultimate Guide to the Backbone of Your PC | Service PC Laptop</title>
     <link rel="canonical" href="https://servicepclaptop.com/the-computer-motherboard.html">
     
@@ -17,9 +17,10 @@
         .article-container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
         .article-content h2 { text-align: left; margin-top: 35px; margin-bottom: 15px; color: var(--text-dark); font-size: 26px; }
         .article-content h3 { text-align: left; margin-top: 25px; margin-bottom: 10px; color: var(--text-dark); font-size: 20px; }
+        .article-content h4 { text-align: left; margin-top: 20px; margin-bottom: 8px; color: var(--text-dark); font-size: 18px; }
         .article-content p { line-height: 1.8; margin-bottom: 20px; color: #4b5563; font-size: 16px; }
-        .article-content ul { margin-left: 20px; margin-bottom: 20px; }
-        .article-content li { margin-bottom: 10px; color: #4b5563; }
+        .article-content ul, .article-content ol { margin-left: 20px; margin-bottom: 20px; }
+        .article-content li { margin-bottom: 10px; color: #4b5563; font-size: 16px; }
         .note-box { background-color: var(--primary-light); border-left: 4px solid var(--primary); padding: 20px; border-radius: var(--radius); margin: 30px 0; }
         .note-box p { margin-bottom: 0; font-weight: 500; color: var(--text-dark); }
         .article-link { color: var(--primary); font-weight: 700; text-decoration: underline; }
@@ -27,6 +28,8 @@
         .article-img-wrapper { margin: 30px 0; text-align: center; }
         .article-img { max-width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow); border: 1px solid var(--border); }
         .img-caption { display: block; margin-top: 10px; font-size: 14px; color: var(--text-light); font-style: italic; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow); margin: 30px 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
     </style>
 </head>
 <body>
@@ -49,56 +52,87 @@
     <header class="page-header">
         <div class="container">
             <span style="color: var(--secondary); font-weight: 700; font-size: 14px; text-transform: uppercase;">Arhitectură Hardware</span>
-            <h1 style="margin-top: 10px;">Placa de bază a calculatorului: Ghidul suprem pentru coloana vertebrală a PC-ului</h1>
-            <p>Cum interconectează circuitele complexe toate componentele hardware, ce rol joacă etajul VRM în stabilitate și cum alegi formatul corect.</p>
+            <h1 style="margin-top: 10px;">Placa de bază a calculatorului: Coloana vertebrală a întregului sistem</h1>
+            <p>O analiză detaliată a circuitelor integrate, interfețelor de comunicație, controlerelor Northbridge/Southbridge și a formatelor structurale.</p>
         </div>
     </header>
 
     <main class="article-container">
         <div class="article-content" data-editable="source" data-path="the-computer-motherboard.html" data-key="body">
-            <p>Placa de bază (motherboard) este fundația pe care este construit orice computer. Deși procesoarele și plăcile video atrag toată atenția când vine vorba de performanța brută în jocuri sau editare, nicio componentă nu poate funcționa fără autostrăzile de circuite (liniile PCIe) și controlerele inteligente integrate pe placa de bază. Ea dictează opțiunile de upgrade, stabilitatea curentului și durata de viață a sistemului.</p>
+            <p>Placa de bază (motherboard) reprezintă a doua cea mai importantă componentă hardware din structura unui calculator desktop. Este o componentă electronică complexă care trebuie să reziste la temperaturi extreme și să suporte cicluri continue de pornire și oprire. Pentru a garanta că aceste circuite respectă toleranțele stricte impuse de industrie, ele sunt proiectate și fabricate cu o atenție chirurgicală la detalii.</p>
             
-            <p>În acest ghid de laborator, descompunem placa de bază în elementele ei esențiale, oferindu-ți detaliile tehnice necesare pentru a înțelege cum funcționează electronica din spatele carcasei tale.</p>
-
-            <h2>Anatomia unei plăci de bază: Componentele vitale explicate</h2>
-            <p>La o simplă privire pe textură, o placă modernă pare o mizerie de trasee de cupru și piese sudate. În realitate, arhitectura sa este organizată chirurgical pe module:</p>
-            
-            <ul>
-                <li><strong>Socket-ul (Soclul procesorului):</strong> Locul fizic unde se instalează CPU-ul. Intel folosește în prezent formate de tip LGA (pinii sunt pe placă), în timp ce AMD a trecut și el la LGA odată cu platforma AM5. Socket-ul determină strict ce generație de procesor poți monta.</li>
-                <li><strong>Chipset-ul (Creierul secundar):</strong> Un cip integrat (cum ar fi Intel Z790 sau AMD B650) care gestionează fluxul de date dintre procesor și restul dispozitivelor: porturi USB, stocare SATA, plăci de rețea și sloturi NVMe.</li>
-                <li><strong>Sloturile DIMM pentru RAM:</strong> Zonele unde se montează modulele de memorie, moderne fiind standardele DDR4 și DDR5.</li>
-            </ul>
+            <p>Fiecare componentă internă și dispozitiv periferic asociat unui computer depinde în mod direct de placa de bază. Indiferent de modul de conexiune – fie că se face fizic printr-un port dedicat, un slot de expansiune, o interfață universală USB sau wireless prin tehnologii Bluetooth – toate componentele hardware se bazează pe infrastructura centrală a plăcii de bază.</p>
         </div>
 
         <div class="article-img-wrapper" data-editable="source" data-path="the-computer-motherboard.html" data-key="main-image">
-            <img src="assets/images/reparatie-placa-baza-laptop-microscop.webp" class="article-img" alt="Inspectia componentelor electronice si a chipset-ului pe o placa de baza" id="article-main-image">
-            <span class="img-caption">Foto: Analiza circuitelor de lângă socket și a sloturilor de expansiune PCIe direct pe bancul de lucru.</span>
+            <img src="assets/images/The-computer-motherboard-1200x800.jpg" class="article-img" alt="Placa de baza a calculatorului cu circuite complexe si trasee de cupru" id="article-main-image">
+            <span class="img-caption">Foto: Arhitectura de circuite imprimate multi-strat a unei plăci de bază moderne, gata de echipare cu componente.</span>
         </div>
 
-        <div class="article-content" data-editable="source" data-path="the-computer-motherboard.html" data-key="body-content">
-            <h2>Etajul de alimentare VRM: Cel mai important element pentru stabilitate</h2>
-            <p>VRM-ul (Voltage Regulator Module) este un circuit electronic critic situat în imediata apropiere a procesorului. Rolul său este de a transforma tensiunea de 12V primită de la sursa de alimentare într-o valoare mult mai mică și extrem de stabilă (în jur de 1.2V - 1.3V) necesară funcționării procesorului.</p>
+        <div class="article-content" data-editable="source" data-path="the-computer-motherboard.html" data-key="body-content-1">
+            <h2>Cum este proiectată și fabricată o placă de bază?</h2>
+            <p>Procesul de design și producție al unei plăci de bază este lung și extrem de riguros. Dezvoltarea unei noi platforme implică o colaborare strânsă cu producătorii de cipuri ai procesoarelor centrale (Intel sau AMD). Plăcile de ultimă generație sunt concepute pentru a integra instantaneu noile progrese tehnologice. Pe baza aceluiași chipset central, producătorul va dezvolta linii diferite de produse (low-end, mid-range sau high-end), specificațiile finale fiind direct dictate de segmentul de preț vizat.</p>
             
-            <p>Un VRM de calitate este compus din mai multe faze de alimentare, bobine de feroită și condensatori solizi. Cu cât etajul are mai multe faze, cu atât curentul livrat este mai curat, iar căldura generată este împărțită pe o suprafață mai mare. VRM-urile ieftine și lăsate fără răcire adecvată se încing frecvent la peste 100°C, provocând restartări subite sau chiar arderea condensatorilor.</p>
+            <p>Deși s-ar putea crede că aceste hardware-uri sunt construite exclusiv pe linii complet automatizate, procesul industrial se bazează parțial și pe munca manuală de înaltă precizie. Prima etapă constă în aplicarea automată a tehnologiei SMD (Surface Mount Technology) pe un circuit imprimat brut (blank PCB), circuitele fiind trecute prin cuptoare speciale de reflow pentru topirea precisă a aliajului de lipit.</p>
+            
+            <p>Ulterior, componentele masive (solide) sunt montate manual de tehnicieni înainte ca placa să treacă în zona de inspecție optică și testare electronică. Fiecare unitate este supusă unui test de stres termic dur (burn-in test), menit să simuleze cele mai dure condiții de utilizare pe care calculatorul le va întâlni pe parcursul anilor de funcționare. Întregul flux tehnologic de asamblare durează aproximativ 15 minute per placă.</p>
+
+            <h2>Rolul procesorului și logica chipset-ului integrat</h2>
+            <p>Chipset-ul plăcii de bază este o tehnologie fixă, lipită din fabrică (BGA) și optimizată să lucreze cu o anumită microarhitectură de procesoare. Acesta nu poate fi eliminat sau upgradat independent și dictează în totalitate lista de procesoare compatibile cu socket-ul fizic.</p>
+            
+            <h3>Magistralele de date și viteza BUS</h3>
+            <p>Termenul „BUS” (magistrală) descrie autostrăzile electronice de transfer de date dintre componente. Conceptul este împrumutat din ingineria electrică grea (barele de cupru care conduc electricitatea în stațiile de putere). Viteza acestei magistrale determină cantitatea de informație ce poate fi transferată într-o secundă și se măsoară în Megahertz (MHz).</p>
+            
+            <h4>Arhitectura cu chip-uri Northbridge și Southbridge</h4>
+            <p>Tradițional, fluxurile majore de date de pe placa de bază erau gestionate de două controlere strategice concepute pentru a preveni gâtuirea (bottleneck) performanței:</p>
+            <ul>
+                <li><strong>Northbridge (Memory Controller Hub):</strong> Situat în partea superioară, controla comunicarea critică de mare viteză dintre procesorul central (CPU), placa video (GPU) și memoria RAM. În procesoarele moderne, acest controller a fost integrat direct în pastila de siliciu a CPU-ului.</li>
+                <li><strong>Southbridge (I/O Controller Hub):</strong> Situat în partea inferioară, gestionează comunicațiile mai lente de intrare/ieșire: sloturile de expansiune PCI, ceasul în timp real (RTC), controlerele de stocare, managementul de consum electric și porturile periferice.</li>
+            </ul>
+        </div>
+
+        <div class="article-img-wrapper" data-editable="source" data-path="the-computer-motherboard.html" data-key="secondary-image">
+            <img src="assets/images/CPU-socket-1200x800.jpg" class="article-img" alt="Soclul procesorului CPU socket de tip LGA pe o placa de baza" id="article-secondary-image">
+            <span class="img-caption">Foto: Detaliu de laborator asupra pinilor sensibili din interiorul unui soclu (socket) de procesor modern.</span>
+        </div>
+
+        <div class="article-content" data-editable="source" data-path="the-computer-motherboard.html" data-key="body-content-2">
+            <h2>Ghidul conectorilor interni și externi de pe mainboard</h2>
+            <p>Clasificarea plăcilor de bază se face în funcție de dimensiunile lor standardizate, cunoscute sub numele de **Form Factor** (cele mai populare fiind ATX pentru carcase standard și mATX / Micro-ATX pentru variante compacte). Indiferent de format, pe suprafața plăcii regăsim următoarele elemente cheie:</p>
+            
+            <ul>
+                <li><strong>Soclul Procesorului (CPU Socket):</strong> Zona unde se instalează fizic procesorul. Crestăturile (notches) speciale de pe margini permit inserția cipului într-o singură direcție sigură, fiind fixat de un mecanism robust de pârghii metalice.</li>
+                <li><strong>Conectorul Principal de Alimentare (ATX Power):</strong> Cea mai mare mufă tată de pe placă, având 24 de pini. Suplimentar, în colțul stânga-sus, se află conectorii auxiliari de 12V (4 sau 8 pini) dedicați exclusiv etajului VRM al procesorului.</li>
+                <li><strong>Sloturile de Memorie RAM:</strong> Canale prevăzute cu cleme laterale de blocare automată. Acestea au ghidaje fizice specifice standardului (DDR4 sau DDR5) pentru a preveni montarea unor module incompatibile.</li>
+                <li><strong>Conectorii SATA și IDE/PATA:</strong> Interfețele de stocare. Standardul modern SATA folosește o mufă mică în formă de „L” pentru a ghida cablul corect, în timp ce vechiul format IDE cu două rânduri de pini (PATA) se mai regăsește doar pe plăci legacy.</li>
+                <li><strong>Sloturile de Expansiune Grafică (PCI-Express):</strong> Interfețe rapide dotate cu o siguranță la capăt pentru fixarea fermă a plăcilor video moderne, înlocuind complet vechile standarde AGP sau PCI clasic. Permit inclusiv tehnologii multi-GPU ca Nvidia SLI sau ATI Crossfire.</li>
+                <li><strong>Header-ele Interne:</strong> Grupuri de pini grupați pe suprafața plăcii care fac legătura cu porturile USB și mufele audio HD/Microfon poziționate pe panoul frontal al carcasei.</li>
+                <li><strong>Porturile I/O Externe (Back Panel):</strong> Conectorii accesibili din exteriorul carcasei: mufe PS/2 legacy (violet pentru tastatură, verde pentru mouse), porturi paralele roșii pentru imprimante vechi, porturi seriale turcoaz (pentru scanere industriale), porturi USB moderne, plăci de rețea RJ45 și mufe audio analogice.</li>
+            </ul>
 
             <div class="note-box">
-                <p>🔧 În service-ul nostru din București, Sector 6, Strada Aleșd nr. 10, diagnosticăm și reparăm la nivel microscopic defecțiunile etajelor VRM arse sau scurtcircuitate. Dacă sistemul tău a suferit o daună electrică majoră, vezi cum intervenim în laborator în <a href="ghid-complet-reparatie-placa-de-baza-laptop.html" class="article-link">Ghidul de Reparație Plăci de Bază</a>.</p>
+                <p>🔧 În service-ul nostru din București, Sector 6, Strada Aleșd nr. 10, deținem echipamente industriale de micro-lipire BGA pentru repararea sau înlocuirea circuitelor arse de pe plăcile de bază. Diagnoza componentelor hardware este complet gratuită, iar reparațiile se realizează direct în service, nu prin intermediari.</p>
             </div>
 
-            <h2>Formate fizice (Form Factors) și fluxul de aer din carcasă</h2>
-            <p>Plăcile de bază vin în dimensiuni standardizate, cele mai populare fiind **ATX** (standard), **Micro-ATX** (mediu) și **Mini-ITX** (foarte compact). Alegerea formatului dictează direct ce carcasă trebuie să cumperi, dar și modul în care aerul va circula printre piese.</p>
+            <h2>Interconectarea cu rețeaua noastră de ghiduri hardware</h2>
+            <p>O funcționare corectă a plăcii de bază este direct dictată de calitatea curentului electric primit; parcurge instrucțiunile esențiale din <a href="alegere-si-asamblare-sursa-alimentare-pc.html" class="article-link">Alegerea și Instalarea Sursei de Alimentare PC</a>. Modul în care modulele de memorie DIMM interacționează cu liniile de comunicație ale chipset-ului este documentat pe larg în <a href="ram-memory.html" class="article-link">Ghidul de Optimizare al Memoriei RAM</a>.</p>
             
-            <p>În special pe plăcile mATX sau ITX, piesele sunt foarte înghesuite, ceea ce înseamnă că temperaturile vor crește mult mai repede. De aceea, managementul corect al cablurilor și calibrarea ventilatoarelor devin obligatorii pentru a menține componentele sub pragul critic.</p>
+            <p>Dacă vrei să înțelegi cum accesează liniile ultra-rapide PCIe stocarea de tip NVMe, citește <a href="ssd-solid-state-drive.html" class="article-link">Ghidul Tehnic al Unităților SSD</a>. De asemenea, poți studia modul în care protejăm micro-componentele SMD din jurul socket-ului împotriva scurtcircuitelor din <a href="pasta-termica-thermal-putty-metal-lichid-laptop.html" class="article-link">Pastă Termică vs. Thermal Putty vs. Metal Lichid</a> sau regulile generale din <a href="asimblare-pc-gaming-custom-componente-compatibilitate.html" class="article-link">Ghidul de Asamblare PC Gaming Custom</a>.</p>
 
-            <h2>Linkuri utile și mentenanță preventivă</h2>
-            <p>Dacă vrei să înveți cum să montezi corect o sursă de alimentare puternică fără să distrugi pinii sensibili ai plăcii prin scurtcircuit, parcurge ghidul nostru tehnic despre <a href="alegere-si-asamblare-sursa-alimentare-pc.html" class="article-link">Alegerea și Instalarea Sursei de Alimentare PC</a>. Pentru detalii complete despre configurarea unui computer stabil, cu un airflow optim, citește <a href="asimblare-pc-gaming-custom-componente-compatibilitate.html" class="article-link">Ghidul de Asamblare PC Gaming Custom și Compatibilitate</a>.</p>
-            
-            <p>Nu uita că inamicul numărul unu al circuitelor este supraîncălzirea. Află cum protejăm noi cipurile împotriva degradării din articolul <a href="pasta-termica-thermal-putty-metal-lichid-laptop.html" class="article-link">Pastă Termică vs. Thermal Putty vs. Metal Lichid</a>.</p>
+            <h2>Explicația video a componentelor plăcii de bază</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/b2pd3Y6aBag" title="Motherboards Explained" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <h2>Ghidul video al formatelor fizice (Form Factors)</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/kQ1FgGidoic" title="Motherboard Form Factors" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
 
             <div style="text-align: center; margin-top: 50px;">
-                <h3>Ai nevoie de un upgrade de procesor sau vrei să testezi stabilitatea plăcii tale de bază?</h3>
-                <p style="margin-bottom: 25px;">La noi în service, diagnosticarea componentelor este întotdeauna gratuită. Te așteptăm pe Strada Aleșd nr. 10.</p>
-                <a href="contact.html" class="btn btn-primary btn-large">Solicită Verificare Gratuită PC</a>
+                <h3>Calculatorul tău refuză să mai pornească sau se resetează instantaneu?</h3>
+                <p style="margin-bottom: 25px;">Defecțiunile la nivelul circuitelor logice sau al condensatorilor de pe placa de bază sunt cauze des întâlnite. Te așteptăm la sediu pentru o verificare completă gratuită.</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Solicită Diagnosticare Gratuită Placă de Bază</a>
             </div>
         </div>
     </main>

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ce este memoria RAM și cum influențează viteza PC-ului? Află diferențele dintre DDR4 și DDR5, importanța profilului XMP și activarea Dual-Channel.">
-    <meta name="keywords" content="ghid memorie ram, activare dual channel, latenta cl ram, profil xmp bios, ddr4 vs ddr5, service pc bucuresti">
+    <meta name="description" content="Ce este memoria RAM și cum influențează viteza PC-ului? Află diferențele dintre DDR4 și DDR5, importanța profilului XMP, memoria virtuală și upgrade-ul SODIMM pentru laptop.">
+    <meta name="keywords" content="ghid memorie ram, activare dual channel, latenta cl ram, profil xmp bios, ddr4 vs ddr5, sodimm laptop bucuresti, service pc sector 6">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="RAM Memory | SERVICE PC LAPTOP">
-    <meta property="og:description" content="Totul despre frecvențe, latențe și configurarea corectă a memoriilor RAM pentru calculatoare și laptopuri de gaming.">
+    <meta property="og:description" content="Totul despre frecvențe, latențe, arhitectura DIMM/SODIMM și configurarea corectă a memoriilor RAM pentru calculatoare și laptopuri de gaming.">
     <title>RAM Memory | Service PC Laptop</title>
     <link rel="canonical" href="https://servicepclaptop.com/ram-memory.html">
     
@@ -16,9 +16,11 @@
     <style>
         .article-container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
         .article-content h2 { text-align: left; margin-top: 35px; margin-bottom: 15px; color: var(--text-dark); font-size: 26px; }
+        .article-content h3 { text-align: left; margin-top: 25px; margin-bottom: 10px; color: var(--text-dark); font-size: 20px; }
+        .article-content h4 { text-align: left; margin-top: 20px; margin-bottom: 8px; color: var(--text-dark); font-size: 18px; }
         .article-content p { line-height: 1.8; margin-bottom: 20px; color: #4b5563; font-size: 16px; }
-        .article-content ul { margin-left: 20px; margin-bottom: 20px; }
-        .article-content li { margin-bottom: 10px; color: #4b5563; }
+        .article-content ul, .article-content ol { margin-left: 20px; margin-bottom: 20px; }
+        .article-content li { margin-bottom: 10px; color: #4b5563; font-size: 16px; }
         .note-box { background-color: var(--primary-light); border-left: 4px solid var(--primary); padding: 20px; border-radius: var(--radius); margin: 30px 0; }
         .note-box p { margin-bottom: 0; font-weight: 500; color: var(--text-dark); }
         .article-link { color: var(--primary); font-weight: 700; text-decoration: underline; }
@@ -26,6 +28,8 @@
         .article-img-wrapper { margin: 30px 0; text-align: center; }
         .article-img { max-width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow); border: 1px solid var(--border); }
         .img-caption { display: block; margin-top: 10px; font-size: 14px; color: var(--text-light); font-style: italic; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow); margin: 30px 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
     </style>
 </head>
 <body>
@@ -48,46 +52,96 @@
     <header class="page-header">
         <div class="container">
             <span style="color: var(--secondary); font-weight: 700; font-size: 14px; text-transform: uppercase;">Optimizare Performanță</span>
-            <h1 style="margin-top: 10px;">Memoria RAM a calculatorului: Cum funcționează și cum obții viteza maximă</h1>
-            <p>Ghidul complet despre capacitate, frecvențe în MHz, latențe CAS și secretele asamblării în sloturile corecte pentru a evita pierderile de cadre în jocuri.</p>
+            <h1 style="margin-top: 10px;">Memoria RAM a calculatorului: Ghid tehnic complet de funcționare și upgrade</h1>
+            <p>Cum influențează capacitatea totală, frecvențele în MHz și latențele CAS viteza de lucru și cum evităm blocajele majore cauzate de memoria virtuală.</p>
         </div>
     </header>
 
     <main class="article-container">
         <div class="article-content" data-editable="source" data-path="ram-memory.html" data-key="body">
-            <p>Memoria RAM (Random Access Memory) este spațiul de lucru ultra-rapid al calculatorului tău. Spre deosebire de un SSD sau hard disk, unde fișierele rămân salvate permanent, memoria RAM stochează temporar datele de care procesorul are nevoie chiar în acea secundă pentru a rula sistemul de operare, jocurile sau aplicațiile deschise. Cu cât memoria este mai rapidă și mai bine configurată, cu atât procesorul va procesa informațiile fără timpi morți.</p>
+            <p>Memoria RAM (Random Access Memory) este o componentă obligatorie pentru orice echipament IT. Indiferent că vorbim despre un computer desktop, un laptop, un telefon mobil sau o tabletă, prezența unui modul de memorie cu acces aleatoriu este o condiție vitală pentru ca aparatul să poată porni și să ruleze cod software.</p>
             
-            <p>Multe persoane fac greșeala de a privi doar capacitatea totală (cum ar fi 16GB sau 32GB), ignorând complet frecvența, latențele și modul fizic de instalare în placa de bază, detalii care pot tăia până la 20% din performanța reală a sistemului hardware.</p>
+            <p>Este extrem de important să diferențiem memoria RAM de memoria de stocare (reprezentată de hard disk sau SSD). În timp ce stocarea păstrează fișierele permanent, chiar și atunci când calculatorul este oprit, memoria RAM acționează ca spațiul de lucru ultra-rapid unde sistemul de operare, aplicațiile și fișierele active sunt încărcate temporar în timpul unei sesiuni active de lucru.</p>
 
-            <h2>DDR4 vs. DDR5: Diferențele tehnice generaționale</h2>
-            <p>În prezent, piața este împărțită între două mari tehnologii. Standardul **DDR4**, matur și accesibil ca preț, operează de regulă la frecvențe cuprinse între 2400 MHz și 3600 MHz. Noua geração, **DDR5**, aduce o arhitectură complet refăcută, pornind de la viteze de 4800 MHz și trecând lejer de 7200 MHz în cazul modulelor premium de gaming.</p>
+            <h2>Capacitatea totală a memoriei RAM și impactul în multitasking</h2>
+            <p>Numărul și complexitatea programelor care pot rula simultan pe un computer depind în mod direct de capacitatea totală a memoriei RAM. Cu cât această valoare este mai mare, cu atât procesorul poate jongla cu mai multe procese în același timp. Dacă observi o degradare vizibilă a vitezei sau blocaje frecvente (înghețarea ecranului) atunci când ai deschise zeci de tab-uri sau aplicații, sistemul tău se confruntă cu o lipsă acută de spațiu în RAM.</p>
             
-            <p>Pe lângă viteza brută, modulele DDR5 au mutat controlul tensiunii (cipul PMIC) direct pe plăcuța de RAM, scoțându-l de pe placa de bază, ceea ce asigură o alimentare mult mai stabilă, dar crește și temperatura de operare a memoriilor, solicitând radiatoare metalice de calitate.</p>
+            <p>Pentru activități profesionale care manipulează fișiere masive – cum sunt designul grafic, randarea 3D și editarea video – suplimentarea memoriei este obligatorie. Fără o cantitate adecvată de RAM, sistemul cade sub presiunea proceselor de fundal, existând riscul blocării totale și al pierderii datelor nesalvate.</p>
+
+            <h2>Ce este memoria RAM Virtuală și de ce încetinește sistemul?</h2>
+            <p>Când memoria RAM fizică devine complet ocupată, sistemul de operare folosește un mecanism de urgență: alocă o porțiune din hard disk sau SSD pentru a funcționa drept memorie virtuală (cunoscută ca Pagefile sau Swap). Deși acest artificiu împiedică închiderea bruscă a programelor, apare o mare problemă de performanță.</p>
+            
+            <p>Chiar și cele mai rapide unități de stocare sunt considerabil mai lente decât modulele RAM fizice. În momentul în care procesorul este forțat să citească și să scrie date din memoria virtuală de pe stocare, viteza generală a calculatorului scade dramatic. De aceea, extinderea capacității fizice de RAM este singura soluție reală pentru a elimina timpii morți de răspuns.</p>
         </div>
 
-        <div class="article-img-wrapper" data-editable="source" data-path="ram-memory.html" data-key="main-image">
-            <img src="assets/images/PC-power-supply-cables.jpg" class="article-img" alt="Instalarea placutelor de memorie RAM in sloturile DIMM ale placii de baza" id="article-main-image">
-            <span class="img-caption">Foto: Montarea modulelor RAM în sloturile DIMM 2 și 4 pentru activarea automată a tehnologiei Dual-Channel.</span>
+        <div class="article-img-wrapper" data-stylesheet="source" data-path="ram-memory.html" data-key="main-image">
+            <img src="assets/images/RAM-Memory-for-laptop-SODIMM-edited-1.jpg" class="article-img" alt="Module de memorie RAM tip SODIMM destinate laptopurilor moderne" id="article-main-image">
+            <span class="img-caption">Foto: Module compacte de memorie RAM în format SODIMM, folosite pentru upgrade-ul termic și de viteză al laptopurilor în service.</span>
         </div>
 
         <div class="article-content" data-editable="source" data-path="ram-memory.html" data-key="body-content">
-            <h2>Regula de Aur: Activarea modului Dual-Channel și profilul XMP / EXPO</h2>
-            <p>Dating o singură plăcuță de RAM (Single Channel), lățimea de bandă prin care datele circulă către procesor este tăiată la jumătate. Pentru performanțe optime, este obligatoriu să folosești modulele în pereche de câte două (Dual Channel). Pe majoritatea plăcilor de bază cu 4 sloturi, plăcuțele trebuie introduse în sloturile **2 și 4** (numărate de la procesor spre exterior) ca să activeze această funcție.</p>
+            <h2>Standardele plăcii de bază, limitările FSB și tipul de slot</h2>
+            <p>Nu poți instala orice tip de memorie RAM pe orice computer. Tipul, generația și viteza maximă acceptată sunt impuse strict de arhitectura plăcii de bază. În trecut, un rol cheie îl juca magistrala **FSB (Front Side Bus)**, care funcționa ca o punte directă de comunicare între CPU și RAM. Dacă instalezi memorii cu o frecvență nominală mai mare decât cea dictată de magistrala plăcii, modulele vor fi limitate automat la valoarea acesteia din urmă.</p>
             
-            <p>O altă mare capcană: când cumperi memorii rapide (de exemplu, DDR4 la 3200 MHz), ele vor porni standard din fabrică la o viteză de bază sigură (2133 MHz). Ca să ruleze la frecvența maximă înscrisă pe cutie, trebuie să intri în BIOS-ul calculatorului și să activezi profilul **XMP** (pentru platforme Intel) sau **EXPO** (pentru AMD). Altfel, ai plătit pentru performanță pe care nu o folosești!</p>
+            <p>Fiecare generație tehnologică aduce viteze crescute, consum redus de energie și modificări fizice esențiale: poziția cheii de ghidaj (decupajul de pe linia de contact) diferă la fiecare standard, împiedicând introducerea accidentală a unui modul DDR3 într-un slot DDR4 sau DDR5.</p>
+
+            <h3>Siloarea sloturilor: Single Channel vs. Dual Channel</h3>
+            <ul>
+                <li><strong>Single Channel:</strong> Placa de bază accesează modulele pe rând, pe o lățime de bandă de 64 de biți. În acest mod, ordinea instalării plăcuțelor în sloturi nu influențează arhitectura.</li>
+                <li><strong>Dual Channel:</strong> Lățimea de bandă se dublează la 128 de biți, permițând accesarea simultană a două module. Pentru a activa acest mod, memoriile trebuie instalate în perechi identice (aceeași capacitate, frecvență și, ideal, același producător) în sloturile pereche indicat de producător (de regulă sloturile 2 și 4).</li>
+                <li><strong>Triple & Quad Channel:</strong> Configurații avansate întâlnite pe platforme entuziast sau servere, unde combinarea greșită a modulelor poate anula instant lățimea extinsă de bandă, forțând sistemul să ruleze la cea mai mică viteză detectată.</li>
+            </ul>
 
             <div class="note-box">
-                <p>🔧 În service-ul nostru situat în București, Sector 6, Strada Aleșd nr. 10, realizăm upgrade-uri de memorie RAM pentru laptopuri (format SODIMM) și desktop-uri (format DIMM). Rulăm teste de diagnosticare dure (MemTest86) pentru a depista modulele defecte care provoacă celebrele ecrane albastre (BSOD) și oferim consultanță gratuită la sediu.</p>
+                <p>🔧 În cadrul service-ului nostru din București, Sector 6, Strada Aleșd nr. 10, efectuăm diagnosticări hardware avansate utilizând utilitare riguroase (MemTest86). Identificăm modulele care generează ecrane albastre (BSOD), calculăm compatibilitățile de frecvență și montăm memorii noi DIMM (Desktop) și SODIMM (Laptop). Diagnosticarea este gratuită.</p>
             </div>
 
-            <h2>Interconectarea cu restul ghidurilor noastre</h2>
-            <p>Viteza memoriei RAM este direct dictată de magistralele integrate în placa de bază. Pentru a înțelege cum gestionează chipset-ul aceste fluxuri masive de date, consultă <a href="the-computer-motherboard.html" class="article-link">Ghidul de Arhitectură al Plăcii de Bază PC</a>. Dacă ești în faza de asamblare a unui PC de la zero și vrei să te asiguri de compatibilitatea fizică dintre coolerele mari și înălțimea plăcuțelor de RAM, citește <a href="asimblare-pc-gaming-custom-componente-compatibilitate.html" class="article-link">Ghidul de Asamblare PC Gaming Custom</a>.</p>
+            <h2>Evoluția pinii-lor și ghidul cronologic al formatelor DIMM / SODIMM</h2>
+            <p>Arhitectura modulelor a evoluat constant din 1949 (anul apariției primelor concepte geometrice de memorie cu acces aleatoriu). Astăzi, pe piață coexistă o varietate de configurații fizice în funcție de numărul de pini (contacte):</p>
+            <ul>
+                <li><strong>72-pin SO-DIMM:</strong> Folosit pentru memorii vechi de tip FPM DRAM și EDO DRAM.</li>
+                <li><strong>144-pin SO-DIMM:</strong> Implementat pentru tehnologia SDR SDRAM în laptopuri vechi.</li>
+                <li><strong>168-pin DIMM:</strong> Format standard pentru Desktop SDR SDRAM, prevăzut cu crestături laterale duble.</li>
+                <li><strong>184-pin DIMM:</strong> Introdus odată cu prima generație de memorii **DDR RAM** în iunie 2000.</li>
+                <li><strong>200-pin SO-DIMM:</strong> Standardul de laptop pentru tehnologiile DDR și DDR2.</li>
+                <li><strong>204-pin SO-DIMM:</strong> Formatul compact specific memoriilor de laptop de tip DDR3.</li>
+                <li><strong>240-pin DIMM:</strong> Utilizat pe desktop-uri pentru generațiile DDR2 și DDR3 (cu poziții diferite ale cheii).</li>
+                <li><strong>260-pin SO-DIMM:</strong> Formatul standard curent pentru laptopuri cu memorii **DDR4**.</li>
+                <li><strong>288-pin DIMM:</strong> Formatul standard pentru calculatoarele desktop cu module **DDR4 și DDR5**, având o grosime redusă a PCB-ului și o curbură a pinilor de contact pentru inserție lină.</li>
+            </ul>
+        </div>
+
+        <div class="article-img-wrapper" data-editable="source" data-path="ram-memory.html" data-key="secondary-image">
+            <img src="assets/images/RAM-Memory-for-desktop-PC-1203x800.jpg" class="article-img" alt="Instalarea corecta a memoriilor DIMM pe o placa de baza de calculator desktop" id="article-secondary-image">
+            <span class="img-caption">Foto: Alinierea unui modul de memorie RAM cu fanta de ghidaj a slotului de pe placa de bază înainte de exercitarea presiunii de fixare.</span>
+        </div>
+
+        <div class="article-content" data-editable="source" data-path="ram-memory.html" data-key="installation-and-vram">
+            <h2>Ghid de instalare în siguranță pentru PC și Laptop</h2>
+            <h4>Procedura pentru Desktop PC:</h4>
+            <p>Se deconectează complet cablul de alimentare de la rețea și perifericele pentru a anula riscul descărcărilor electrostatice sau al scurtcircuitelor pe liniile de stand-by ale plăcii. Se deschide panoul lateral, se curăță praful acumulat în fante (particulele de praf căzute în slot pot izola pinii și bloca pornirea). Se deschid clamele laterale ale slotului, se aliniază decupajul memoriei cu cheia fizică a slotului și se apasă ferm pe ambele capete până când clemele se închid automat cu un declic pronunțat.</p>
+
+            <h4>Procedura pentru Laptop (SODIMM):</h4>
+            <p>Se oprește laptopul, se întoarce pe o suprafață moale și se decuplează bateria externă (sau cea internă după desfacerea capacului). Modulele de laptop se montează diferit: se introduc în slot la un unghi înclinat de aproximativ 30 de grade, împingând ușor până când contactele intră complet, apoi se apasă plăcuța în jos, spre placa de bază, până când cele două arcuri metalice laterale o blochează ferm în poziție orizontală.</p>
+
+            <h2>Ce este memoria VRAM (Video RAM) și prin ce diferă?</h2>
+            <p>Spre deosebire de modulele DIMM/SODIMM interschimbabile, memoria VRAM (Video Random Access Memory) este o structură hardware integrată (lipită direct de fabrică pe PCB-ul plăcii video sau lângă procesorul grafic al laptopului). Ea nu se poate scoate, înlocui sau upgrada prin metode clasice.</p>
             
-            <p>Asigură-te de asemenea că sistemul tău are o sursă capabilă să livreze tensiuni stabile pe liniile secundare citind <a href="alegere-si-brassamblare-sursa-alimentare-pc.html" class="article-link">Alegerea și Instalarea Sursei de Alimentare PC</a> sau vezi cum protejăm cipurile de supraîncălzire în articolul de laborator <a href="pasta-termica-thermal-putty-metal-lichid-laptop.html" class="article-link">Pastă Termică vs. Thermal Putty vs. Metal Lichid</a>.</p>
+            <p>VRAM-ul servește exclusiv ca zonă de stocare temporară de mare viteză pentru datele geometrice, texturile de înaltă rezoluție și frame-buffer-ul generat de cipul grafic. O cantitate insuficientă de VRAM forțează placa grafică să folosească memoria RAM principală a sistemului, generând blocaje masive de cadre și scăderi drastice ale rezoluției imaginii afișate.</p>
+
+            <h2>Interconectarea cu rețeaua noastră de ghiduri</h2>
+            <p>Capacitatea memoriei RAM de a rula la frecvențe maxime depinde în totalitate de setările din BIOS și de stabilitatea traseelor de alimentare; consultă <a href="the-computer-motherboard.html" class="article-link">Ghidul de Arhitectură al Plăcii de Bază PC</a>. Pentru a preveni erorile electrice pe liniile secundare ale memoriei, asigură-te că folosești o sursă calibrată corect, urmând instrucțiunile din <a href="alegere-si-asamblare-sursa-alimentare-pc.html" class="article-link">Alegerea și Instalarea Sursei de Alimentare PC</a>.</p>
+            
+            <p>Dacă asamblezi o configurație nouă de la zero, parcurge <a href="asimblare-pc-gaming-custom-componente-compatibilitate.html" class="article-link">Ghidul de Asamblare PC Gaming Custom</a>, iar dacă vrei să înțelegi cum interacționează memoria cu fișierele de paginare de mare viteză de pe stocarea flash, citește <a href="ssd-solid-state-drive.html" class="article-link">Ghidul Tehnic pentru Unitățile SSD</a>. De asemenea, poți vedea cum protejăm circuitele logice de supraîncălzire în <a href="pasta-termica-thermal-putty-metal-lichid-laptop.html" class="article-link">Pastă Termică vs. Thermal Putty vs. Metal Lichid</a>.</p>
+
+            <h2>Explicația video a funcționării memoriei RAM</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/PVad0c2cljo" title="RAM Explained - Random Access Memory" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
 
             <div style="text-align: center; margin-top: 50px;">
-                <h3>Sistemul tău se blochează aleatoriu sau jocurile se închid singure fără eroare?</h3>
-                <p style="margin-bottom: 25px;">Memoria RAM defectă sau incompatibilă este cauza principală a instabilității. Diagnosticarea la noi este complet gratuită.</p>
+                <h3>Sistemul tău suferă de ecrane albastre (Blue Screen) sau se restartează în aplicații?</h3>
+                <p style="margin-bottom: 25px;">Defecțiunile celulelor logice din RAM sunt principala cauză a instabilității software. Te așteptăm la sediu pentru o testare hardware gratuită.</p>
                 <a href="contact.html" class="btn btn-primary btn-large">Solicită Diagnosticare Gratuită RAM</a>
             </div>
         </div>

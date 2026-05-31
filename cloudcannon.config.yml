@@ -47,7 +47,7 @@ _snippets_imports:
     exclude:
       - hugo_instagram
 editor:
-  default_path:
+  default_path: /blog/pasta-termica-thermal-putty-metal-lichid-laptop.html
 timezone: Europe/Bucharest
 markdown:
   engine: commonmark

@@ -6,10 +6,24 @@
     <meta name="description" content="Ghidul complet despre placa de bază a calculatorului. Descoperă cum funcționează circuitele, etajele Northbridge/Southbridge, formatele ATX și pașii de diagnosticare în service.">
     <meta name="keywords" content="arhitectura placa de baza pc, socket procesor lga, chipset northbridge southbridge, form factor atx matx, service pc bucuresti sector 6">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Understanding the Computer Motherboard: The Ultimate Guide to the Backbone of Your PC">
-    <meta property="og:description" content="O analiză detaliată a componentelor de pe placa de bază, de la controllerul de memorie și magistralele de date, până la porturile de expansiune.">
-    <title>Understanding the Computer Motherboard: The Ultimate Guide to the Backbone of Your PC | Service PC Laptop</title>
+    
+    <!-- RECONSTRUCȚIE OPEN GRAPH: ELIMINAT MARKETING CLICHES ȘI ENGLIZISME -->
+    <meta property="og:title" content="Arhitectura și Componentele Plăcii de Bază PC | SERVICE PC LAPTOP">
+    <meta property="og:description" content="Analiza tehnică a circuitelor imprimate multi-strat, magistralelor BUS, controlerelor logice și diagnosticarea defectelor electronice.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://servicepclaptop.com/the-computer-motherboard.html">
+    
+    <!-- CONFIGURARE IMAGINE PREVIZUALIZARE WHATSAPP -->
+    <meta property="og:image" content="https://servicepclaptop.com/images/The-computer-motherboard-1200x800.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <title>Arhitectura Plăcii de Bază PC: Ghid de Funcționare și Service | Service PC Laptop</title>
     <link rel="canonical" href="https://servicepclaptop.com/the-computer-motherboard.html">
+    
+    <!-- IMPLEMENTARE FAVICON ÎN TAB -->
+    <link rel="icon" type="image/png" href="images/favicon-logo-service-pc-laptop.png">
     
     <link rel="stylesheet" href="assets/css/style.css">
     
@@ -35,8 +49,9 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-                <span class="logo-icon">💻</span>
+            <!-- ÎNLOCUIT EMOJI NAVBAR CU SIGLA CORECTĂ INLINE -->
+            <a href="index.html" class="logo" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="images/favicon-logo-service-pc-laptop.png" alt="Logo Service PC Laptop" style="height: 32px; width: auto; display: block;">
                 <span class="logo-text">Service PC Laptop</span>
             </a>
             <ul class="nav-links">
@@ -81,7 +96,7 @@
             <p>Chipset-ul plăcii de bază este o tehnologie fixă, lipită din fabrică (BGA) și optimizată să lucreze cu o anumită microarhitectură de procesoare. Acesta nu poate fi eliminat sau upgradat independent și dictează în totalitate lista de procesoare compatibile cu socket-ul fizic.</p>
             
             <h3>Magistralele de date și viteza BUS</h3>
-            <p>Termenul „BUS” (magistrală) descrie autostrăzile electronice de transfer de date dintre componente. Conceptul este împrumutat din ingineria electrică grea (barele de cupru care conduc electricitatea în stațiile de putere). Viteza acestei magistrale determină cantitatea de informație ce poate fi transferată într-o secundă și se măsoară în Megahertz (MHz).</p>
+            <p>Termenul „BUS” (magistrală) descrie autostrăzile electronice de transfer de date dintre componente. Conceptul este împrumutat din ingineria electrică grea (barele de cupru care conduc electricitatea în stațiile de putere). Viteza această magistrală determină cantitatea de informație ce poate fi transferată într-o secundă și se măsoară în Megahertz (MHz).</p>
             
             <h4>Arhitectura cu chip-uri Northbridge și Southbridge</h4>
             <p>Tradițional, fluxurile majore de date de pe placa de bază erau gestionate de două controlere strategice concepute pentru a preveni gâtuirea (bottleneck) performanței:</p>
@@ -98,12 +113,12 @@
 
         <div class="article-content" data-editable="source" data-path="the-computer-motherboard.html" data-key="body-content-2">
             <h2>Ghidul conectorilor interni și externi de pe mainboard</h2>
-            <p>Clasificarea plăcilor de bază se face în funcție de dimensiunile lor standardizate, cunoscute sub numele de **Form Factor** (cele mai populare fiind ATX pentru carcase standard și mATX / Micro-ATX pentru variante compacte). Indiferent de format, pe suprafața plăcii regăsim următoarele elemente cheie:</p>
+            <p>Clasificarea plăcilor de bază se face în funcție de dimensiunile lor standardizate, cunoscute sub numele de <strong>Form Factor</strong> (cele mai populare fiind ATX pentru carcase standard și mATX / Micro-ATX pentru variante compacte). Indiferent de format, pe suprafața plăcii regăsim următoarele elemente cheie:</p>
             
             <ul>
                 <li><strong>Soclul Procesorului (CPU Socket):</strong> Zona unde se instalează fizic procesorul. Crestăturile (notches) speciale de pe margini permit inserția cipului într-o singură direcție sigură, fiind fixat de un mecanism robust de pârghii metalice.</li>
                 <li><strong>Conectorul Principal de Alimentare (ATX Power):</strong> Cea mai mare mufă tată de pe placă, având 24 de pini. Suplimentar, în colțul stânga-sus, se află conectorii auxiliari de 12V (4 sau 8 pini) dedicați exclusiv etajului VRM al procesorului.</li>
-                <li><strong>Sloturile de Memorie RAM:</strong> Canale prevăzute cu cleme laterale de blocare automată. Acestea au ghidaje physical specifice standardului (DDR4 sau DDR5) pentru a preveni montarea unor module incompatibile.</li>
+                <li><strong>Sloturile de Memorie RAM:</strong> Canale prevăzute cu cleme laterale de blocare automată. Acestea au ghidaje fizice specifice standardului (DDR4 sau DDR5) pentru a preveni montarea unor module incompatibile.</li>
                 <li><strong>Conectorii SATA și IDE/PATA:</strong> Interfețele de stocare. Standardul modern SATA folosește o mufă mică în formă de „L” pentru a ghida cablul corect, în timp ce vechiul format IDE cu două rânduri de pini (PATA) se mai regăsește doar pe plăci legacy.</li>
                 <li><strong>Sloturile de Expansiune Grafică (PCI-Express):</strong> Interfețe rapide dotate cu o siguranță la capăt pentru fixarea fermă a plăcilor video moderne, înlocuind complet vechile standarde AGP sau PCI clasic. Permit inclusiv tehnologii multi-GPU ca Nvidia SLI sau ATI Crossfire.</li>
                 <li><strong>Header-ele Interne:</strong> Grupuri de pini grupați pe suprafața plăcii care fac legătura cu porturile USB și mufele audio HD/Microfon poziționate pe panoul frontal al carcasei.</li>
@@ -132,7 +147,7 @@
             <div style="text-align: center; margin-top: 50px;">
                 <h3>Calculatorul tău refuză să mai pornească sau se resetează instantaneu?</h3>
                 <p style="margin-bottom: 25px;">Defecțiunile la nivelul circuitelor logice sau al condensatorilor de pe placa de bază sunt cauze des întâlnite. Te așteptăm la sediu pentru o verificare completă gratuită.</p>
-                <a href="contact.html" class="btn btn-primary btn-large">Solicită Diagnosticare Gratuită Placă de Bază</a>
+                <a href="contact.html" class="btn btn-primary btn-large">Solicită Diagnosticare Placă de Bază</a>
             </div>
         </div>
     </main>

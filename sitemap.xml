@@ -1,53 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- Homepage -->
-  <url>
-    <loc>https://servicepclaptop.com/</loc>
-    <lastmod>2024-03-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Servicii -->
-  <url>
-    <loc>https://servicepclaptop.com/servicii.html</loc>
-    <lastmod>2024-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Blog/Articole -->
-  <url>
-    <loc>https://servicepclaptop.com/blog.html</loc>
-    <lastmod>2024-03-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Portofoliu -->
-  <url>
-    <loc>https://servicepclaptop.com/portofoliu.html</loc>
-    <lastmod>2024-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Contact -->
-  <url>
-    <loc>https://servicepclaptop.com/contact.html</loc>
-    <lastmod>2024-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-    <!-- Termeni, Condiții și Politică de Confidențialitate -->
-  <url>
-    <loc>https://servicepclaptop.com/termeni-conditii-politica-confidentialitate.html</loc>
-    <lastmod>2024-05-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://servicepclaptop.com/sitemap-pagini.xml</loc>
+    <lastmod>2026-06-01</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://servicepclaptop.com/sitemap-articole.xml</loc>
+    <lastmod>2026-06-01</lastmod>
+  </sitemap>
+</sitemapindex>

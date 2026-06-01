@@ -11,9 +11,18 @@
     <meta property="og:description" content="Servicii profesionale de reparație și revizii pentru laptopuri și calculatoare. Diagnostic gratuit, garanție 12 luni.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://servicepclaptop.com">
-    <meta property="og:image" content="https://servicepclaptop.com/og-image.png">
+    
+    <!-- ACTUALIZAT: OG:IMAGE CU URL ABSOLUT PENTRU AFIȘARE CORECTĂ PE WHATSAPP -->
+    <meta property="og:image" content="https://servicepclaptop.com/images/favicon-logo-service-pc-laptop.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+
     <title>Service PC Laptop - Reparații Laptop și Calculator București | Diagnostic Gratuit</title>
     <link rel="canonical" href="https://servicepclaptop.com/">
+    
+    <!-- IMPLEMENTARE FAVICON COMPATIBIL LIGHTHOUSE -->
+    <link rel="icon" type="image/png" href="images/favicon-logo-service-pc-laptop.png">
     
     <!-- CALE ACTUALIZATĂ PENTRU FOLDERUL ASSETS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -23,9 +32,10 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Service PC Laptop",
-        "image": "https://servicepclaptop.com/logo.png",
+        "image": "https://servicepclaptop.com/images/favicon-logo-service-pc-laptop.png",
         "description": "Servicii profesionale de reparație, revizii și mentenanță avansată pentru laptopuri și calculatoare în București",
         "address": {
+            "@type": "PostalAddress",
             "@type": "PostalAddress",
             "streetAddress": "Strada Aleșd nr. 10",
             "addressLocality": "București",
@@ -42,10 +52,11 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">💻</span>
+            <!-- ACTUALIZAT: ÎNLOCUIT EMOJI NAVBAR CU IMAGINEA FA VICON-LOGO -->
+            <a href="index.html" class="logo" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="images/favicon-logo-service-pc-laptop.png" alt="Logo Service PC Laptop" style="height: 32px; width: auto; display: block;">
                 <span class="logo-text">Service PC Laptop</span>
-            </div>
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Acasă</a></li>
                 <li><a href="servicii.html">Servicii</a></li>

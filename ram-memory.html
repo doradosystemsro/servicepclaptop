@@ -6,10 +6,21 @@
     <meta name="description" content="Ce este memoria RAM și cum influențează viteza PC-ului? Află diferențele dintre DDR4 și DDR5, importanța profilului XMP, memoria virtuală și upgrade-ul SODIMM pentru laptop.">
     <meta name="keywords" content="ghid memorie ram, activare dual channel, latenta cl ram, profil xmp bios, ddr4 vs ddr5, sodimm laptop bucuresti, service pc sector 6">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="RAM Memory | SERVICE PC LAPTOP">
-    <meta property="og:description" content="Totul despre frecvențe, latențe, arhitectura DIMM/SODIMM și configurarea corectă a memoriilor RAM pentru calculatoare și laptopuri de gaming.">
-    <title>RAM Memory | Service PC Laptop</title>
-    <link rel="canonical" href="https://servicepclaptop.com/ram-memory.html">
+    
+    <meta property="og:title" content="Arhitectura și Funcționarea Memoriei RAM | SERVICE PC LAPTOP">
+    <meta property="og:description" content="Analiză tehnică despre frecvențe în MHz, latențe CAS, arhitecturi DIMM/SODIMM și configurarea modulelor în Dual Channel.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://servicepclaptop.com/ram-memory.html">
+    
+    <meta property="og:image" content="https://servicepclaptop.com/images/RAM-Memory-for-laptop-SODIMM-edited-1.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <title>Memoria RAM a Calculatorului: Ghid Tehnic de Funcționare și Upgrade | Service PC Laptop</title>
+    <link class="canonical" href="https://servicepclaptop.com/ram-memory.html">
+    
+    <link rel="icon" type="image/png" href="images/favicon-logo-service-pc-laptop.png">
     
     <link rel="stylesheet" href="assets/css/style.css">
     
@@ -35,8 +46,8 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-                <span class="logo-icon">💻</span>
+            <a href="index.html" class="logo" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="images/favicon-logo-service-pc-laptop.png" alt="Logo Service PC Laptop" style="height: 32px; width: auto; display: block;">
                 <span class="logo-text">Service PC Laptop</span>
             </a>
             <ul class="nav-links">
@@ -74,40 +85,40 @@
             <p>Chiar și cele mai rapide unități de stocare sunt considerabil mai lente decât modulele RAM fizice. În momentul în care procesorul este forțat să citească și să scrie date din memoria virtuală de pe stocare, viteza generală a calculatorului scade dramatic. De aceea, extinderea capacității fizice de RAM este singura soluție reală pentru a elimina timpii morți de răspuns.</p>
         </div>
 
-        <div class="article-img-wrapper" data-stylesheet="source" data-path="ram-memory.html" data-key="main-image">
+        <div class="article-img-wrapper" data-editable="source" data-path="ram-memory.html" data-key="main-image">
             <img src="images/RAM-Memory-for-laptop-SODIMM-edited-1.jpg" class="article-img" alt="Module de memorie RAM tip SODIMM destinate laptopurilor moderne" id="article-main-image">
-            <span class="img-caption">Foto: Module compacte de memorie RAM în format SODIMM, folosite pentru upgrade-ul termic și de viteză al laptopurilor în service.</span>
+            <span class="img-caption">Foto: Module compacte de memorie RAM în format SODIMM, folosite pentru upgrade-ul de capacitate și de viteză al laptopurilor în service.</span>
         </div>
 
         <div class="article-content" data-editable="source" data-path="ram-memory.html" data-key="body-content">
             <h2>Standardele plăcii de bază, limitările FSB și tipul de slot</h2>
-            <p>Nu poți instala orice tip de memorie RAM pe orice computer. Tipul, generația și viteza maximă acceptată sunt impuse strict de arhitectura plăcii de bază. În trecut, un rol cheie îl juca magistrala **FSB (Front Side Bus)**, care funcționa ca o punte directă de comunicare între CPU și RAM. Dacă instalezi memorii cu o frecvență nominală mai mare decât cea dictată de magistrala plăcii, modulele vor fi limitate automat la valoarea acesteia din urmă.</p>
+            <p>Nu poți instala orice tip de memorie RAM pe orice computer. Tipul, generația și viteza maximă acceptată sunt impuse strict de arhitectura plăcii de bază. În trecut, un rol cheie îl juca magistrala <strong>FSB (Front Side Bus)</strong>, care funcționa ca o punte directă de comunicare între CPU și RAM. Dacă instalezi memorii cu o frecvență nominală mai mare decât cea dictată de magistrala plăcii, modulele vor fi limitate automat la valoarea acesteia din urmă.</p>
             
             <p>Fiecare generație tehnologică aduce viteze crescute, consum redus de energie și modificări fizice esențiale: poziția cheii de ghidaj (decupajul de pe linia de contact) diferă la fiecare standard, împiedicând introducerea accidentală a unui modul DDR3 într-un slot DDR4 sau DDR5.</p>
 
-            <h3>Siloarea sloturilor: Single Channel vs. Dual Channel</h3>
+            <h3>Arhitectura sloturilor: Single Channel vs. Dual Channel</h3>
             <ul>
                 <li><strong>Single Channel:</strong> Placa de bază accesează modulele pe rând, pe o lățime de bandă de 64 de biți. În acest mod, ordinea instalării plăcuțelor în sloturi nu influențează arhitectura.</li>
-                <li><strong>Dual Channel:</strong> Lățimea de bandă se dublează la 128 de biți, permițând accesarea simultană a două module. Pentru a activa acest mod, memoriile trebuie instalate în perechi identice (aceeași capacitate, frecvență și, ideal, același producător) în sloturile pereche indicat de producător (de regulă sloturile 2 și 4).</li>
+                <li><strong>Dual Channel:</strong> Lățimea de bandă se dublează la 128 de biți, permițând accesarea simultană a două module. Pentru a activa acest mod, memoriile trebuie instalate în perechi identice (aceeași capacitate, frecvență și, ideal, același producător) în sloturile pereche indicate de producător (de regulă sloturile 2 și 4).</li>
                 <li><strong>Triple & Quad Channel:</strong> Configurații avansate întâlnite pe platforme entuziast sau servere, unde combinarea greșită a modulelor poate anula instant lățimea extinsă de bandă, forțând sistemul să ruleze la cea mai mică viteză detectată.</li>
             </ul>
 
             <div class="note-box">
-                <p>🔧 În cadrul service-ului nostru din București, Sector 6, Strada Aleșd nr. 10, efectuăm diagnosticări hardware avansate utilizând utilitare riguroase (MemTest86). Identificăm modulele care generează ecrane albastre (BSOD), calculăm compatibilitățile de frecvență și montăm memorii noi DIMM (Desktop) și SODIMM (Laptop). Diagnosticarea este gratuită.</p>
+                <p>🔧 În cadrul service-ului nostru din București (Sector 6, Strada Aleșd nr. 10), efectuăm diagnosticări hardware avansate utilizând utilitare riguroase (MemTest86). Identificăm modulele care generează ecrane albastre (BSOD), calculăm compatibilitățile de frecvență și montăm memorii noi DIMM (Desktop) și SODIMM (Laptop). Diagnoza hardware este complet gratuită.</p>
             </div>
 
-            <h2>Evoluția pinii-lor și ghidul cronologic al formatelor DIMM / SODIMM</h2>
+            <h2>Evoluția pinilor și ghidul cronologic al formatelor DIMM / SODIMM</h2>
             <p>Arhitectura modulelor a evoluat constant din 1949 (anul apariției primelor concepte geometrice de memorie cu acces aleatoriu). Astăzi, pe piață coexistă o varietate de configurații fizice în funcție de numărul de pini (contacte):</p>
             <ul>
                 <li><strong>72-pin SO-DIMM:</strong> Folosit pentru memorii vechi de tip FPM DRAM și EDO DRAM.</li>
                 <li><strong>144-pin SO-DIMM:</strong> Implementat pentru tehnologia SDR SDRAM în laptopuri vechi.</li>
                 <li><strong>168-pin DIMM:</strong> Format standard pentru Desktop SDR SDRAM, prevăzut cu crestături laterale duble.</li>
-                <li><strong>184-pin DIMM:</strong> Introdus odată cu prima generație de memorii **DDR RAM** în iunie 2000.</li>
+                <li><strong>184-pin DIMM:</strong> Introdus odată cu prima generație de memorii <strong>DDR RAM</strong> în iunie 2000.</li>
                 <li><strong>200-pin SO-DIMM:</strong> Standardul de laptop pentru tehnologiile DDR și DDR2.</li>
                 <li><strong>204-pin SO-DIMM:</strong> Formatul compact specific memoriilor de laptop de tip DDR3.</li>
                 <li><strong>240-pin DIMM:</strong> Utilizat pe desktop-uri pentru generațiile DDR2 și DDR3 (cu poziții diferite ale cheii).</li>
-                <li><strong>260-pin SO-DIMM:</strong> Formatul standard curent pentru laptopuri cu memorii **DDR4**.</li>
-                <li><strong>288-pin DIMM:</strong> Formatul standard pentru calculatoarele desktop cu module **DDR4 și DDR5**, având o grosime redusă a PCB-ului și o curbură a pinilor de contact pentru inserție lină.</li>
+                <li><strong>260-pin SO-DIMM:</strong> Formatul standard curent pentru laptopuri cu memorii <strong>DDR4</strong>.</li>
+                <li><strong>288-pin DIMM:</strong> Formatul standard pentru calculatoarele desktop cu module <strong>DDR4 și DDR5</strong>, având o grosime redusă a PCB-ului și o curbură a pinilor de contact pentru inserție lină.</li>
             </ul>
         </div>
 
@@ -125,7 +136,7 @@
             <p>Se oprește laptopul, se întoarce pe o suprafață moale și se decuplează bateria externă (sau cea internă după desfacerea capacului). Modulele de laptop se montează diferit: se introduc în slot la un unghi înclinat de aproximativ 30 de grade, împingând ușor până când contactele intră complet, apoi se apasă plăcuța în jos, spre placa de bază, până când cele două arcuri metalice laterale o blochează ferm în poziție orizontală.</p>
 
             <h2>Ce este memoria VRAM (Video RAM) și prin ce diferă?</h2>
-            <p>Spre deosebire de modulele DIMM/SODIMM interschimbabile, memoria VRAM (Video Random Access Memory) este o structură hardware integrată (lipită direct de fabrică pe PCB-ul plăcii video sau lângă procesorul grafic al laptopului). Ea nu se poate scoate, înlocui sau upgrada prin metode clasice.</p>
+            <p>Spre deosebire de modulele DIMM/SODIMM interschimbabile, memoria VRAM (Video Random Access Memory) este o structură hardware integrată (lipită direct din fabrică pe PCB-ul plăcii video sau lângă procesorul grafic al laptopului). Ea nu se poate scoate, înlocui sau upgrada prin metode clasice.</p>
             
             <p>VRAM-ul servește exclusiv ca zonă de stocare temporară de mare viteză pentru datele geometrice, texturile de înaltă rezoluție și frame-buffer-ul generat de cipul grafic. O cantitate insuficientă de VRAM forțează placa grafică să folosească memoria RAM principală a sistemului, generând blocaje masive de cadre și scăderi drastice ale rezoluției imaginii afișate.</p>
 
@@ -142,7 +153,7 @@
             <div style="text-align: center; margin-top: 50px;">
                 <h3>Sistemul tău suferă de ecrane albastre (Blue Screen) sau se restartează în aplicații?</h3>
                 <p style="margin-bottom: 25px;">Defecțiunile celulelor logice din RAM sunt principala cauză a instabilității software. Te așteptăm la sediu pentru o testare hardware gratuită.</p>
-                <a href="contact.html" class="btn btn-primary btn-large">Solicită Diagnosticare Gratuită RAM</a>
+                <a href="contact.html" class="btn btn-primary btn-large">Solicită Diagnosticare RAM</a>
             </div>
         </div>
     </main>
@@ -151,7 +162,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Service PC Laptop</h4>
-                <p>Mentenanță preventivă avansată realizată la nivel industrial și reparații electronice de precizie în București.</p>
+                <p>Mentenanță preventivă avansată realizată la nivel profesional și reparații electronice de precizie în București.</p>
             </div>
             <div class="footer-section">
                 <h4>Navigare</h4>

@@ -466,61 +466,95 @@ section h2 {
     color: var(--text-light);
 }
 
-/* ===== SERVICE DETAILS ===== */
+/* ===== SERVICE DETAILS (OPTIMIZAT ȘI GENERALIZAT) ===== */
 .services-detailed {
     max-width: 1000px;
     margin: 0 auto;
 }
 
+/* Caseta de serviciu generală flexibilă */
 .service-detail {
-    margin-bottom: 60px;
-    padding-bottom: 40px;
-    border-bottom: 2px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+    gap: 20px;
 }
 
-.service-detail:last-child {
-    border-bottom: none;
+.service-info {
+    flex: 1;
 }
 
-.service-detail h2 {
+.service-detail h3 {
     text-align: left;
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 22px;
+    margin: 0 0 5px 0;
+    color: var(--text-dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .service-meta {
-    color: var(--text-light);
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
     text-align: left;
 }
 
 .service-detail-content {
     text-align: left;
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .service-detail-content p {
-    color: var(--text-light);
-    margin-bottom: 15px;
+    color: #4b5563;
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
-.service-detail-content ul {
-    list-style: none;
-    margin-bottom: 20px;
-}
-
-.service-detail-content li {
-    margin-left: 20px;
-    position: relative;
-    margin-bottom: 12px;
+.service-detail-content p strong {
+    font-size: 18px;
     color: var(--text-dark);
+    display: block;
+    margin-bottom: 10px;
 }
 
-.service-detail-content li:before {
-    content: "✓";
-    position: absolute;
-    left: -20px;
-    color: var(--success);
-    font-weight: bold;
+.service-action {
+    flex-shrink: 0;
+}
+
+/* Noul buton generalizat de WhatsApp cu nuanța oficială și contrast Lighthouse */
+.btn-whatsapp-service {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #189111;
+    color: #ffffff !important;
+    padding: 12px 22px;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(24, 145, 17, 0.15);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-whatsapp-service:hover {
+    background-color: #13750e;
+    transform: translateY(-1px);
 }
 
 /* ===== PRICING SECTION ===== */
@@ -1153,8 +1187,21 @@ section h2 {
         font-size: 28px;
     }
 
-    .service-detail h2 {
-        font-size: 22px;
+    /* COMPORTAMENT AUTOMAT CASETE SERVICII PE TELEFON (Muta butonul sub text) */
+    .service-detail {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .service-action {
+        width: 100%;
+    }
+
+    .btn-whatsapp-service {
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .services-grid,

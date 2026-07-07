@@ -3,5 +3,6 @@ Allow: /
 Disallow: /admin/
 Disallow: /.env
 Disallow: /.ht
+Disallow: */tag/*
 
 Sitemap: https://servicepclaptop.com/sitemap_index.xml
